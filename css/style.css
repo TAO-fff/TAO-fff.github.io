@@ -60,9 +60,10 @@ main {
 
 .section__ttl-en {
   font-family: Montserrat;
-  font-size: 1.8vw;
-  font-weight: 300;
+  font-size: 1.3vw;
+  font-weight: 600;
   color: #739087;
+  padding-left: 10px;
 }
 
 .fade-in-text span {
