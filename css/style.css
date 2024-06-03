@@ -60,10 +60,9 @@ main {
 
 .section__ttl-en {
   font-family: Montserrat;
-  font-size: 1.3vw;
-  font-weight: 600;
+  font-size: 1.8vw;
+  font-weight: 300;
   color: #739087;
-  padding-left: 10px;
 }
 
 .fade-in-text span {
@@ -1430,68 +1429,6 @@ main {
 }
 /**** about ****/
 
-
-/* 中間の動く人 */
-.middle-area-peron {
-  position: relative;
-  z-index: 1;
-  width: 1.8%;
-  box-sizing: border-box;
-}
-
-.person-blue {
-  width: 100%;
-  position: absolute;
-  top: -7vw;
-  left: 35px;
-}
-
-.person-blue img {
-  animation: walk-dawn 6s  alternate 0s infinite;
-}
-
-
-@keyframes walk-dawn {
-  0% {
-    transform: translateY(1px);
-  }
-  10% {
-    transform: translateY(4px);
-  }
-  20% {
-    transform: translateY(8px);
-  }
-  30% {
-    transform: translateY(12px);
-  }
-  40% {
-    transform: translateY(16px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  60% {
-    transform: translateY(25px);
-  }
-  80% {
-    transform: translateY(30px);
-  }
-  100% {
-    transform: translateY(35px);
-  }
-}
-
-/* sp 動く人 */
-@media screen and (max-width:1100px) {
-  .middle-area-peron {
-   display: none;
-  }
-  
-  .person-blue {
-    display: none;
-  }
-  
-}
 
 /* skills */
 .skills {
