@@ -1442,7 +1442,7 @@ main {
   width: 100%;
   position: absolute;
   top: -7vw;
-  left: 20px;
+  left: 35px;
 }
 
 .person-blue img {
@@ -1478,6 +1478,18 @@ main {
   100% {
     transform: translateY(35px);
   }
+}
+
+/* sp 動く人 */
+@media screen and (max-width:1100px) {
+  .middle-area-peron {
+   display: none;
+  }
+  
+  .person-blue {
+    display: none;
+  }
+  
 }
 
 /* skills */
