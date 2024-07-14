@@ -14,6 +14,17 @@
       href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+New&display=swap"
       rel="stylesheet"
     />
+    <!-- adobe font -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'jyq2xel',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- slick -->
@@ -54,18 +65,26 @@
           <div class="home__mv">
             <div class="mv__img">
               <picture>
-                <source
+                <!-- <source
                   srcset="./img/portofolio_mv_sp@2x-100.jpg"
                   media="(max-width: 550px)"
-                />
+                /> -->
                 <source
-                  srcset="./img/portfolio_mv_tab1-100.jpg"
+                srcset="./img/sp-mv2@2x-8.png"
+                media="(max-width: 550px)"
+              />
+                <source
+                  srcset="./img/tab-mv2-8.png"
                   media="(max-width: 1000px)"
                 />
-                <img
+                <!-- <img
                   src="./img/portfolio_mv-100.jpg"
                   alt="とこよだあけみのポートフォリオ"
-                />
+                /> -->
+                <img
+                src="./img/mv2-8.png"
+                alt="とこよだあけみのポートフォリオ"
+              />
               </picture>
               <h1 class="title">
                 <div class="title-text-group">
@@ -132,24 +151,26 @@
           <section class="home__works container">
             <div class="section__ttl" id="works">
               <h2 class="section__ttl-ja">デザインしてます。</h2>
+              <img src="./img/ttl-back.png" alt="ふき出し">
+            </div>
+
               <p
                 class="section__ttl-en section__ttl-works"
                 id="worksTitle"
-                data-text="WORKS LIST"
+                data-text="WORKS "
               >
-                WORKS LIST
+                WORKS
               </p>
-            </div>
             <div class="home__works__gallery works-slider">
               <!-- works -->
               <div class="gallery__group">
                 <div class="gallery-item">
-                  <a href="../works/works1.html">
+                  <a href="./works/works1.html">
                     <img
-                    src="./img/home_works1@2x-100.jpg"
-                    alt="飲食店  新商品ハンバーガーのバナー"
-                    class="gallery-img"
-                  />
+                      src="./img/home_works1@2x-100.jpg"
+                      alt="飲食店  新商品ハンバーガーのバナー"
+                      class="gallery-img"
+                    />
                     <p class="works__gallery-ttl">飲食店 バナー</p>
                     <p class="works__gallery-text">
                       Design / Photoshop / illustrator<br />
@@ -228,23 +249,24 @@
                 </div>
               </div>
               <!-- //works gallery 2 -->
-              </div>
+            </div>
 
             <div class="about-btn-area">
-              <div class="about-btn btn">
-                <a href="./works-gallery.html">
+              <div class="about-btn ">
+              <a href="./works-gallery.html">
+              <div class="btn">
                   <div class="about-btn-inner">
                     <p class="about-btn-text">VIEW ALL</p>
                     <div class="about-btn-arrow">
                       <span></span>
                     </div>
                   </div>
-                </a>
-              </div>
+                </div>
+              </a>
             </div>
-            <div class="person-yellow2">
+            <!-- <div class="person-yellow2">
               <img src="./img/person-yellow@2x-8.png" alt="" />
-            </div>
+            </div> -->
           </section>
           <!-- //works -->
           <!-- about -->
@@ -252,33 +274,36 @@
             <!-- section-ttl  共通クラス -->
             <div class="section__ttl">
               <h2 class="section__ttl-ja">はじめまして。</h2>
+              <img src="./img/ttl-back.png" alt="ふき出し">
+            </div>
+
               <p
                 class="section__ttl-en section__ttl-about"
                 id="aboutTltle"
-                data-text="ABOUT ME"
+                data-text="ABOUT "
               >
-                ABOUT ME
+                ABOUT
               </p>
-            </div>
             <!-- //section-ttl  共通クラス -->
             <!-- profile -->
             <div class="home__profile__wrap">
               <p class="profile-text">
                 <span>とこよだ あけみ</span>
-                <span>神奈川県在住で、千葉県の端っこ生まれ。</span>
+                <span>千葉県の端っこ生まれ、
+                  神奈川県在住。</span>
                 <br />
-                <span
-                  >スポーツ系専門学校のマリンスポーツ科を卒業して、
-                  小学生から30歳頃までスポーツ一筋の生活を送ってました。</span
+                <br
+                  ><span>スポーツ系専門学校を卒業して、<br />
+                  スキューバ―ダイビング関係の仕事、スポーツジムインストラクターをしていました。</span
                 >
                 <br />
 
                 <span
-                  >友人から何気なく言われた『ホームページ作ってみてほしい』の一言をきっかけにWebデザインの世界に飛び込みました。</span
+                  >友人から『ホームページ作ってみてほしい』と声をかけられた事をきっかけにWebデザインの世界に飛び込みました。</span
                 >
                 <br />
                 <span
-                  >あなたのアイデアや想いを形にするお手伝いができればと思っています。
+                  >
                 </span>
               </p>
               <img
@@ -300,7 +325,7 @@
                 <br />
                 <span
                   >スポーツ系専門学校のマリンスポーツ科を卒業して、
-                  小学生から30歳頃までスポーツ一筋の生活を送ってました。</span
+                  30歳頃までスポーツに関わる職業に携わってきました。</span
                 >
                 <br />
 
@@ -314,18 +339,20 @@
               </p>
             </div>
             <!-- profile btn -->
-            <a href="./about.html">
             <div class="about-btn-area">
-              <div class="about-btn btn">
+              <div class="about-btn ">
+                <a href="./profile.html">
+                <div class="btn">
                   <div class="about-btn-inner">
-                    <p class="about-btn-text"> READ MORE</p>
+                    <p class="about-btn-text">READ MORE</p>
                     <div class="about-btn-arrow">
                       <span></span>
                     </div>
                   </div>
                 </div>
+              </a>
+                </div>
               </div>
-            </a>
           </section>
           <!-- //about -->
           <!-- skills -->
@@ -333,15 +360,17 @@
             <!-- section-ttl  共通クラス -->
             <div class="section__ttl" id="skills">
               <h2 class="section__ttl-ja">こんなお手伝いできます。</h2>
-              <p
+              <img src="./img/ttl-back.png" alt="ふき出し">
+            </div>
+            
+            <p
                 class="section__ttl-en section__ttl-skill"
                 id="skillsTitle"
                 data-text="SKILLS"
               >
                 SKILLS
               </p>
-            </div>
-            <!-- //section-ttl -->
+              <!-- //section-ttl -->
             <!-- skill list -->
             <div class="skills__group">
               <!-- skill list 1 -->
@@ -349,7 +378,7 @@
                 <li>
                   <div class="skills__ttl-wrapper">
                     <img
-                      src="./img/skills_item1@2x-100.jpg"
+                      src="./img/design-logo_アートボード 1 のコピー 2.png"
                       alt="デザインができます。"
                       class="skill-img"
                     />
@@ -363,7 +392,7 @@
                 <li>
                   <div class="skills__ttl-wrapper">
                     <img
-                      src="./img/skills_item2@2x-100.jpg"
+                      src="./img/Photoshop-logo.png"
                       alt="フォトショップが使えます。"
                       class="skill-img"
                     />
@@ -376,7 +405,7 @@
                 <li>
                   <div class="skills__ttl-wrapper">
                     <img
-                      src="./img/skills_item3@2x-100.jpg"
+                      src="./img/illustrator-logo.png"
                       alt="イラストレーターが使えます。"
                       class="skill-img"
                     />
@@ -393,7 +422,7 @@
                 <li>
                   <div class="skills__html-wrapper">
                     <img
-                      src="./img/skills_item4@2x-100.jpg"
+                      src="./img/html_css-logo-03.png"
                       alt="HTMLとCSSができます。"
                     />
                     <p class="skills-title">HTML / CSS</p>
@@ -406,7 +435,7 @@
                 <li>
                   <div class="skills__jquery-wrapper">
                     <img
-                      src="./img/skills_item5@2x-100.jpg"
+                      src="./img/Jquery-logo-04.png"
                       alt="ホームページに動きがつけられます。"
                     />
                   </div>
@@ -417,7 +446,7 @@
                 <li>
                   <div class="skills__ttl-wrapper">
                     <img
-                      src="./img/skills_item6@2x-100.jpg"
+                      src="./img/res-logo_アートボード 1 のコピー 3.png"
                       alt="携帯などの端末に対応したホームページの制作ができます。"
                       class="skill-img"
                     />
@@ -429,6 +458,29 @@
                 </li>
               </ul>
             </div>
+            <!-- skill-bottom -->
+            <div class="skills-bottom">
+              <div class="skills-bottom-wrapper">
+                <div class="skills-bottom-illust">
+                  <img src="./img/skills.png" alt="" />
+                </div>
+                <div class="skills-bottom-content">
+                  <div class="skills-bottom-content-container">
+                    <ul class="skills-bottom-text">
+                      <li class="skills-bottom-text-list">
+                        There are my skills!
+                      </li>
+                      <li class="skills-bottom-text-list">
+                        and I plan add more in the future!
+                      </li>
+                      <li class="skills-bottom-text-list">
+                        I've just started practicing illustration!
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
           <!-- //skills -->
           <!-- contact -->
@@ -436,6 +488,9 @@
             <!-- section-ttl  共通クラス -->
             <div class="section__ttl" id="contact">
               <h2 class="section__ttl-ja">お気軽にご相談ください。</h2>
+              <img src="./img/ttl-back.png" alt="ふき出し">
+            </div>
+
               <p
                 class="section__ttl-en section__ttl-contact"
                 id="contactTitle"
@@ -443,7 +498,6 @@
               >
                 CONTACT
               </p>
-            </div>
             <!-- //section-ttl -->
             <!-- contact form -->
             <div class="contact__wrapper">
@@ -477,107 +531,118 @@
       <div class="person-red">
         <div class="person-red">
           <img class="person-red-img" src="./img/person-red@2x-8.png" alt="" />
-          <img class="person-redpair-img" src="./img/person-redpair@2x-8.png" alt="" />
+          <img
+            class="person-redpair-img"
+            src="./img/person-redpair@2x-8.png"
+            alt=""
+          />
         </div>
       </div>
 
       <!-- footer sitemap＆sns -->
-      <div class="footer__wrapper">
-        <!-- sitemap  footer-ttl部分のみ共通クラス-->
-        <!-- footer left -->
-        <div class="footer-img-left">
+      <div class="footer-container">
+        <div class="footer__wrapper">
+          <!-- sitemap  footer-ttl部分のみ共通クラス-->
+          <!-- footer left -->
+          <!-- <div class="footer-img-left">
           <img src="./img/footer-left@2x-100.jpg" alt="足あとイラスト" />
-        </div>
-        <!-- //footer left -->
+        </div> -->
+          <!-- //footer left -->
 
-        <div class="sitemap__area">
-          <div class="footer-ttl-text">
-            <p class="footer-ttl-map">SITE MAP</p>
-          </div>
-          <div class="sitemap__nav">
-            <ul class="sitemap-item">
-              <a href="#works">
-                <li>
-                  <p class="sitemap-item-en">WORKS</p>
-                  <p class="sitemap-item-ja">デザインしてます。</p>
-                </li>
-              </a>
-            </ul>
+          <div class="sitemap__area">
+            <div class="footer-ttl-text">
+              <p class="footer-ttl-map">SITE MAP</p>
+            </div>
+            <div class="sitemap__nav">
+              <ul class="sitemap-item">
+                <a href="#works">
+                  <li>
+                    <p class="sitemap-item-en">WORKS</p>
+                    <p class="sitemap-item-ja">デザインしてます。</p>
+                  </li>
+                </a>
+              </ul>
 
-            <ul class="sitemap-item">
-              <a href="#about">
-                <li>
-                  <p class="sitemap-item-en">ABOUT</p>
-                  <p class="sitemap-item-ja">はじめまして。</p>
-                </li>
-              </a>
-            </ul>
+              <ul class="sitemap-item">
+                <a href="#about">
+                  <li>
+                    <p class="sitemap-item-en">ABOUT</p>
+                    <p class="sitemap-item-ja">はじめまして。</p>
+                  </li>
+                </a>
+              </ul>
 
-            <ul class="sitemap-item">
-              <a href="#skills">
-                <li>
-                  <p class="sitemap-item-en">SKILLS</p>
-                  <p class="sitemap-item-ja">こんなお手伝いできます。</p>
-                </li>
+              <ul class="sitemap-item">
+                <a href="#skills">
+                  <li>
+                    <p class="sitemap-item-en">SKILLS</p>
+                    <p class="sitemap-item-ja">こんなお手伝いできます。</p>
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+          <!-- //sitemap -->
+          <!-- sns -->
+          <div class="sns__area">
+            <div class="footer-ttl-text">
+              <p class="footer-ttl-sns">SOCIAL</p>
+            </div>
+            <div class="sns-icon">
+              <a
+                href="https://www.instagram.com/tao_ffffff/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./img/top-sns-insta@2x-8.png"
+                  alt="インスタグラム アカウント"
+              /></a>
+            </div>
+            <div class="sns-icon">
+              <a href="" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="./img/top-sns-x@2x-8.png"
+                  alt="エックス  アカウント"
+                />
               </a>
-            </ul>
+            </div>
+            <!-- sp sns -->
+            <div class="sp-sns-icon">
+              <a
+                href="https://www.instagram.com/tao_ffffff/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./img/footer_sns_insta@2x-100.jpg"
+                  alt="インスタグラム アカウント"
+              /></a>
+              <a href="" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="./img/footer_sns_x@2x-100.jpg"
+                  alt="エックス  アカウント"
+                />
+              </a>
+            </div>
           </div>
-        </div>
-        <!-- //sitemap -->
-        <!-- sns -->
-        <div class="sns__area">
-          <div class="footer-ttl-text">
-            <p class="footer-ttl-sns">SOCIAL</p>
-          </div>
-          <div class="sns-icon">
-            <a
-              href="https://www.instagram.com/tao_ffffff/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="./img/top-sns-insta@2x-8.png"
-                alt="インスタグラム アカウント"
-            /></a>
-          </div>
-          <div class="sns-icon">
-            <a href="" target="_blank" rel="noopener noreferrer">
-              <img src="./img/top-sns-x@2x-8.png" alt="エックス  アカウント" />
-            </a>
-          </div>
-          <!-- sp sns -->
-          <div class="sp-sns-icon">
-            <a
-              href="https://www.instagram.com/tao_ffffff/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="./img/footer_sns_insta@2x-100.jpg"
-                alt="インスタグラム アカウント"
-            /></a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-              <img
-                src="./img/footer_sns_x@2x-100.jpg"
-                alt="エックス  アカウント"
-              />
-            </a>
-          </div>
-        </div>
-        <!-- //sns -->
-        <!-- footer right -->
-        <div class="footer-img-right">
-          <div class="top-btn">
+          <!-- //sns -->
+          <!-- footer right -->
+          <div class="footer-img-right">
             <a href="#top" id="back-to-top-btn">
-              <div class="top-btn-arrow"><span></span></div>
-              <img src="./img/footer_right_1@2x-8.png" alt="足あとマーク" />
-              <p class="top-btn-text">BACK<span> TO</span> <span>TOP</span></p>
+              <div class="top-btn">
+                <div class="top-btn-arrow"><span></span></div>
+                <img src="./img/footer_right_1@2x-8.png" alt="足あとマーク" />
+                <!-- <p class="top-btn-text">
+                  BACK<span> TO</span> <span>TOP</span>
+                </p> -->
+              </div>
             </a>
           </div>
+          <!-- //footer right -->
         </div>
-        <!-- //footer right -->
+        <p class="copyright">© 2024 Akemi Tokoyoda portfolio site</p>
       </div>
-      <p class="copyright">© 2024 Akemi Tokoyoda portfolio site</p>
     </footer>
 
     <script>
@@ -789,73 +854,71 @@
         });
       });
 
-   // works slider
-$(function () {
-  $(".works-slider .gallery__group").slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    infinite: true,
-    dots: false,
-    centerMode: false, // 中央揃え
-    centerPadding: "20%", // 左右のパディング（次のスライドが少し見えるようにする）
-    variableWidth: false,
-    responsive: [
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 1,
+      // works slider
+      $(function () {
+        $(".works-slider .gallery__group").slick({
+          slidesToShow: 2,
           slidesToScroll: 1,
           arrows: false,
           autoplay: true,
-          autoplaySpeed: 2000,
+          autoplaySpeed: 1000,
           infinite: true,
           dots: false,
           centerMode: false, // 中央揃え
-          centerPadding: "20%", // 左右のパディング（次のスライドが少し見えるようにする）
+          centerPadding: "0%", // 左右のパディング（次のスライドが少し見えるようにする）
           variableWidth: false,
-        },
-      },
-      {
-        breakpoint: 676,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          autoplay: true,
-          autoplaySpeed: 2000,
-          infinite: true,
-          dots: false,
-          centerMode: true, // 中央揃え
-          centerPadding: "0%", // 左右のパディング
-          variableWidth: false,
-        },
-      },
-    ],
-  });
-});
+          responsive: [
+            {
+              breakpoint: 1000,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                infinite: true,
+                dots: false,
+                centerMode: false, // 中央揃え
+                centerPadding: "0%", // 左右のパディング（次のスライドが少し見えるようにする）
+                variableWidth: false,
+              },
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                infinite: true,
+                dots: false,
+                centerMode: true, // 中央揃え
+                centerPadding: "0%", // 左右のパディング
+                variableWidth: false,
+              },
+            },
+          ],
+        });
+      });
 
-// top-btn 1000px以下の時、200pxスクロールしたら出てくる
-document.addEventListener("DOMContentLoaded", function() {
-  const topBtn = document.querySelector('.top-btn');
-  topBtn.style.display = 'none';  // 初期状態では非表示
+      // top-btn 1000px以下の時、200pxスクロールしたら出てくる
+      document.addEventListener("DOMContentLoaded", function () {
+        const topBtn = document.querySelector(".top-btn");
+        topBtn.style.display = "none"; // 初期状態では非表示
 
-  window.addEventListener('scroll', function() {
-    if (window.innerWidth <= 1000) {
-      if (window.scrollY > 200) {
-        topBtn.style.display = 'flex';  // スクロールが200pxを超えたら表示
-      } else {
-        topBtn.style.display = 'none';  // スクロールが200px未満なら非表示
-      }
-    } else {
-      topBtn.style.display = 'none';  // 画面幅が1000pxを超えている場合は非表示
-    }
-  });
-});
-
-
+        window.addEventListener("scroll", function () {
+          if (window.innerWidth <= 3000) {
+            if (window.scrollY > 200) {
+              topBtn.style.display = "flex"; // スクロールが200pxを超えたら表示
+            } else {
+              topBtn.style.display = "none"; // スクロールが200px未満なら非表示
+            }
+          } else {
+            topBtn.style.display = "none"; // 画面幅が1000pxを超えている場合は非表示
+          }
+        });
+      });
     </script>
   </body>
 </html>
