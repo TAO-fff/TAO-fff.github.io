@@ -2287,11 +2287,10 @@ main {
     align-items: center;
     margin: 0 auto;
     padding: 0 20px;
-    border: 1.5px solid #333;
   }
 
   .skill-img {
-    width: 40px;
+    width: 80%;
   }
 
   .skills-title {
@@ -2309,41 +2308,6 @@ main {
     margin: 0 auto;
   }
 
-  /* html */
-  .skills__html-wrapper {
-    width: 100%;
-    max-width: 480px;
-    height: 75px;
-    gap: 3vw;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0 20px;
-    border: 0.5px solid #333;
-  }
-
-  .skills__html-wrapper img {
-    width: 40px;
-  }
-
-  /* jQuery */
-  .skills__jquery-wrapper {
-    width: 100%;
-    max-width: 480px;
-    height: 75px;
-    gap: 40px;
-    align-items: center;
-    margin: 0 auto;
-    border: 0.5px solid #333;
-    display: flex;
-    align-items: center;
-  }
-
-  .skills__jquery-wrapper img {
-    width: 160px;
-    margin: 0 auto;
-    padding-bottom: 0;
-  }
 
   .skills-bottom-illust {
     width: 40%; /* 画像エリアの幅 */
@@ -2393,11 +2357,10 @@ main {
     align-items: center;
     margin: 0 auto;
     padding: 0 20px;
-    border: 1.5px solid #333;
   }
 
   .skill-img {
-    width: 40px;
+    width: 80%;
   }
 
   .skills-title {
@@ -2413,42 +2376,6 @@ main {
     font-size: 16px;
     padding-top: 23px;
     margin: 0 auto;
-  }
-
-  /* html */
-  .skills__html-wrapper {
-    width: 100%;
-    max-width: 480px;
-    height: 65px;
-    gap: 3vw;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0 20px;
-    border: 0.5px solid #333;
-  }
-
-  .skills__html-wrapper img {
-    width: 40px;
-  }
-
-  /* jQuery */
-  .skills__jquery-wrapper {
-    width: 100%;
-    max-width: 480px;
-    height: 65px;
-    gap: 40px;
-    align-items: center;
-    margin: 0 auto;
-    border: 0.5px solid #333;
-    display: flex;
-    align-items: center;
-  }
-
-  .skills__jquery-wrapper img {
-    width: 160px;
-    margin: 0 auto;
-    padding-bottom: 0;
   }
 
   /* skill botom */
