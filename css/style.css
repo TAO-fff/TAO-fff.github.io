@@ -48,10 +48,6 @@ main {
 }
 
 /*top-page（右)*/
-.home__wrap {
-  padding-left: 80px;
-}
-
 .home__mv {
   padding-top: 0;
   padding-left: 0px;
@@ -72,6 +68,13 @@ main {
 }
 
 /* home セクションタイトル */
+.ttl-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
 .section__ttl {
   width: 35%;
   display: flex;
@@ -84,12 +87,19 @@ main {
   font-family: senobi-gothic;
   font-size: 2.6vw;
   font-weight: 400;
-  padding: 25px 0px 0px 0px;
+  padding: 25px 0px 0px 12px;
   white-space: nowrap;
   letter-spacing: -5px;
   color: #333;
   background-position: left bottom;
-  text-align: center;
+  text-align: left;
+}
+
+.js-text-effect span{
+  display: inline-block; /*必須*/
+  opacity: 0;
+  visibility: visible;
+  transform: rotateY(90deg);
 }
 
 .section__ttl-en {
@@ -101,6 +111,7 @@ main {
   overflow: hidden; /* 必須 */
   white-space: nowrap; /* 必須 */
   border-right: 1px solid transparent; /* 初期状態では透明に設定 */
+  width: 20%;
 }
 
 .section__tti-works,
@@ -381,16 +392,16 @@ main {
   width: 100%;
   max-width: 160px;
   margin: 0 auto;
-  padding: 35px 0 0 20px;
+  padding: 35px 20px 0 20px;
   position: fixed;
 }
 
 .header__nav li {
   width: 170px;
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
-  padding-top: 20px;
+  margin-top: 17px;
   text-align: left;
   opacity: 1;
   transition: opacity 0.1s;
@@ -424,8 +435,8 @@ main {
     position: fixed;
     top: 0;
     left: 0;
-    width: 97%;
-    height: 97vh;
+    width: 90%;
+    height: 90vh;
     background-color: #fefefe;
     border: 10px solid #9dc4b7;
     border-radius: 0 0 100% 0;
@@ -459,7 +470,6 @@ main {
     cursor: pointer;
     z-index: 9999;
     background-color: #9dc4b7;
-    border-radius: 0 0 90% 0;
   }
 
   .sp__menu__btn {
@@ -474,18 +484,17 @@ main {
   .sp__menu__btn span {
     top: 15px;
     left: 5px;
-    background-image: url(../img/skill-back-03.png);
-    background-size: cover;
+   
   }
 
   .sp__menu__btn span::after {
     position: absolute;
-    top: 12px;
-    left: 8px;
+    top: 15px;
+    left: 25px;
     display: block;
     content: "";
-    width: 20px;
-    height: 1.75px;
+    width: 41px;
+    height: 3px;
     background-color: #333;
     transition: 0.6s;
     border-radius: 5rem;
@@ -493,12 +502,12 @@ main {
 
   .sp__menu__btn span::before {
     position: absolute;
-    top: 22px;
-    left: 8px;
+    top: 33px;
+    left: 25px;
     display: block;
     content: "";
-    width: 26px;
-    height: 1.75px;
+    width: 30px;
+    height: 3px;
     background-color: #333;
     transition: 0.5s;
     border-radius: 5rem;
@@ -506,7 +515,7 @@ main {
 
   /* ham  クリック時 btn動き */
   .open span::before {
-    transform: rotate(315deg);
+    transform: rotate(-135deg);
     top: 25px;
     width: 28px;
     bottom: 0px;
@@ -514,7 +523,7 @@ main {
   }
 
   .open span::after {
-    transform: rotate(225deg);
+    transform: rotate(-45deg);
     top: 25px;
     width: 28px;
     background-color: #333;
@@ -625,25 +634,25 @@ main {
 }
 
 @keyframes walk {
-  0% {
+  0%, 60% {
     transform: rotate(0);
   }
-  10% {
+  10%, 70% {
     transform: rotate(-2deg);
   }
-  12% {
+  12%, 72% {
     transform: rotate(2deg);
   }
-  14% {
+  14%, 74% {
     transform: rotate(-2deg);
   }
-  16% {
+  16%, 76% {
     transform: rotate(2deg);
   }
-  18% {
+  18%, 78% {
     transform: rotate(-2deg);
   }
-  100% {
+  40%, 100% {
     transform: rotate(0);
   }
 }
@@ -700,29 +709,28 @@ main {
 }
 
 @keyframes greeting {
-  0%,
-  100% {
+  0%, 60%, 100% {
     transform: translateY(0);
   }
-  40% {
+  10%, 80% {
     transform: rotate(2deg);
   }
-  42% {
+  12%, 82% {
     transform: rotate(-2deg);
   }
-  44% {
+  14%, 84% {
     transform: rotate(2deg);
   }
-  48% {
+  18%, 88% {
     transform: rotate(-2deg);
   }
-  50% {
+  20%, 90% {
     transform: translateX(1px);
   }
-  55% {
+  25%, 93% {
     transform: translateX(3px);
   }
-  60% {
+  30%, 98% {
     transform: translateX(4px);
   }
 }
@@ -732,38 +740,54 @@ main {
   100% {
     transform: translateY(0);
   }
-  10% {
+  10%, 70% {
     transform: rotate(2deg);
   }
-  12% {
+  12%, 72% {
     transform: rotate(-2deg);
   }
-  14% {
+  14%, 74% {
     transform: rotate(2deg);
   }
-  18% {
+  18%, 78% {
     transform: rotate(-2deg);
   }
-  20% {
+  20%, 80% {
     transform: translateX(1px);
   }
-  25% {
+  25%, 85% {
     transform: translateX(3px);
   }
-  30% {
+  30%, 90% {
     transform: translateX(4px);
   }
-  40% {
+  40%, 95% {
     transform: translateX(5px);
   }
 }
 
 /* scroll */
-.scroll-area {
-  width: 2.2%;
+.scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-bar {
+  width: 1.8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
-  top: 90%;
-  left: 12%;
+  left: 28vw;
+  padding-top: 5vw;
+}
+
+.scroll-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* 適宜調整 */
 }
 
 .mv__scroll-img {
@@ -798,21 +822,6 @@ main {
 }
 
 /* スクロールbar */
-.scroll-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 52%;
-  padding-top: 77px;
-  position: relative; /* 親要素を相対位置指定 */
-}
-
-.scroll-img-container {
-  width: 100%; /* 必要に応じて調整 */
-  height: 9vw; /* 画像の高さ */
-  overflow: hidden;
-}
-
 .scroll-img {
   position: absolute; /* 相対位置指定した親要素からの絶対位置指定 */
   left: 0;
@@ -849,19 +858,128 @@ main {
   }
 }
 
-.scroll-bar p {
-  font-family: Montserrat;
-  font-size: 1.3vw;
-  font-weight: 300;
-  padding-left: 5px;
-  writing-mode: vertical-rl;
-  position: absolute; /* 相対位置指定した親要素からの絶対位置指定 */
-  left: calc(100% + 10px); /* 画像の右側に配置 */
-  top: 110px;
-  animation: text-slide 1.6s ease-in-out infinite,
-    text-fade 1.6s ease-out infinite;
+
+
+/*=============== stepイメージイラスト =================*/
+.scroll-img-container {
+  width: 100%;
+  max-width: 30px;
 }
 
+.scroll-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 30px 0 20px 0;
+}
+
+.steps-right {
+  transform: rotate(130deg);
+  margin-right: 7.5px;
+}
+
+.steps-right p {
+  transform: rotate(-128deg);
+}
+
+.steps-left {
+  transform: rotate(123deg);
+  margin-left: 10px;
+}
+
+.steps-left p {
+  transform: rotate(-125deg);
+}
+
+
+.steps-right img,
+.steps-left img {
+  width: 95%;
+  min-width: 14px;
+}
+
+.steps-right img {
+  transform: translate(.1vw, .5vh);
+}
+
+.steps {
+  opacity: 0;
+  animation: step-animation 3s infinite; /* アニメーションの合計時間を調整 */
+}
+
+.steps p {
+  font-family: senobi-gothic;
+  font-size: 14px;
+  display: flex;
+  text-align: center;
+  /* transform: rotate(220deg); */
+  justify-content: center;
+  gap: 5px;
+}
+
+@keyframes step-animation {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+}
+
+.steps:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.steps:nth-child(2) {
+  animation-delay: 0.4s; /* 各ステップの表示タイミングを調整 */
+}
+
+.steps:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.steps:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.steps:nth-child(5) {
+  animation-delay: 1.6s;
+}
+
+.steps:nth-child(6) {
+  animation-delay: 2s;
+}
+
+.steps:nth-child(1) {
+  animation: step-animation 5s infinite;
+}
+
+.steps:nth-child(2) {
+  animation: step-animation 5s infinite 0.4s;
+}
+
+.steps:nth-child(3) {
+  animation: step-animation 5s infinite 0.8s;
+}
+
+.steps:nth-child(4) {
+  animation: step-animation 5s infinite 1.2s;
+}
+
+.steps:nth-child(5) {
+  animation: step-animation 5s infinite 1.6s;
+}
+
+.steps:nth-child(6) {
+  animation: step-animation 5s infinite 2s;
+}
+
+
+/*  */
 .sp-title-text-group,
 .sp-title__sub,
 .sp-title__main {
@@ -869,7 +987,7 @@ main {
 }
 
 /* sp top・mv (home)*/
-
+/* 1000pxから767pxまで */
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   /* 動く人 イラスト */
   .person-yellow {
@@ -906,41 +1024,29 @@ main {
     line-height: 0.6;
   }
 
-  /* scroll */
-  .scroll-area {
-    width: 2.6%;
-    position: absolute;
-    top: 90%;
-    left: 16%;
-  }
+/* scroll */
+.scroll-bar {
+  width: 2.1%;
+  position: absolute;
+  left: 28vw;
+  margin-top: -50px;
+}
 
-  /* スクロールbar */
-  .scroll-bar {
-    display: flex;
-    justify-content: start;
-    gap: 4px;
-    align-items: center;
-    width: 100%;
-  }
+/* スクロールbar */
 
-  .scroll-img-container {
-    width: 90%; /* 必要に応じて調整 */
-    height: 10vw; /* 画像の高さ */
-    overflow: hidden;
-  }
+/*=============== stepイメージイラスト =================*/
+.scroll-wrapper {
+  gap: 0px;
+  margin: 20px 0;
+}
 
-  .scroll-bar img {
-    width: 50%;
-    padding-top: 5.8vw;
-    padding-bottom: 5vw;
-  }
+.steps-right {
+  margin-right: 7.5px;
+}
 
-  .scroll-bar p {
-    font-size: 12px;
-    left: calc(100%); /* 画像の右側に配置 */
-    top: 110px;
-    letter-spacing: 0.8px;
-  }
+.steps-left {
+  margin-left: 7px;
+}
 }
 
 /* 767px～550pxまで */
@@ -985,26 +1091,15 @@ main {
   }
 
   /* 動く人 イラスト */
-  /* .person-yellow,
-  .person-yellow img,
-  .person-green,
-  .person-green img,
-  .person-gray,
-  .person-gray img,
-  .person-beige,
-  .person-beige img {
-    display: none;
-  } */
-
   .person-yellow {
-    width: 7.3%;
+    width: 7.4%;
     position: absolute;
     top: 48%;
     left: 47%;
   }
 
   .person-green {
-    width: 7.1%;
+    width: 7.3%;
     position: absolute;
     top: 82%;
     left: 56.5%;
@@ -1015,53 +1110,40 @@ main {
   }
 
   .person-beige {
-    width: 8.5%;
+    width: 8.7%;
     position: absolute;
     top: 0%;
     left: 15%;
   }
 
-  /* scroll */
-  .scroll-area {
-    width: 6%;
-    position: absolute;
-    top: 90%;
-    left: 16%;
-  }
+ /* scroll */
+.scroll-bar {
+  width: 2.5%;
+  position: absolute;
+  left: 28vw;
+  margin-top: -130px;
+}
 
-  .mv__scroll-img {
-    width: 100%;
-  }
+/* スクロールbar */
 
-  /* スクロールbar */
-  .scroll-bar {
-    display: flex;
-    justify-content: start;
-    gap: 24px;
-    align-items: center;
-    position: absolute;
-    left: 23px;
-  }
+/*=============== stepイメージイラスト =================*/
+.scroll-wrapper {
+  gap: 0px;
+  margin: 20px 0;
+}
 
-  .scroll-img-container {
-    width: 100%; /* 必要に応じて調整 */
-    height: 15vw; /* 画像の高さ */
-    overflow: hidden;
-  }
+.steps-right {
+  margin-right: 1.5px;
+}
 
-  .scroll-bar img {
-    width: 9px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: block; /* imgを表示 */
-    padding-left: 0;
-  }
+.steps-left {
+  margin-left: 1px;
+}
 
-  .scroll-bar p {
-    font-size: 12px;
-    left: calc(100% + 6px); /* 画像の右側に配置 */
-    top: 90px;
-  }
+.steps p {
+  font-size: 13px;
+  gap: 1px;
+}
 
   .sp-title-text-group,
   .sp-title__sub,
@@ -1114,6 +1196,7 @@ main {
     font-weight: 300;
     font-size: 24px;
     padding-top: 10px;
+    text-shadow: 1px 1px 1px #fff
   }
 
   .title-text-group,
@@ -1149,43 +1232,41 @@ main {
     display: none;
   }
 
-  /* scroll */
-  .scroll-area {
-    width: 4.9%;
-    position: absolute;
-    top: 98%;
-    left: 18%;
-  }
+  
+ /* scroll */
+.scroll-bar {
+  width: 4.5%;
+  position: absolute;
+  left: 20vw;
+  margin-top: -145px;
+}
 
-  /* スクロールbar */
-  .scroll-bar {
-    display: flex;
-    justify-content: start;
-    gap: 24px;
-    align-items: center;
-    position: absolute;
-    left: 5px;
-    top: 40px;
-  }
+/* スクロールbar */
 
-  .scroll-img-container {
-    width: 100%;
-    min-width: 10px; /* 必要に応じて調整 */
-    height: 20vw; /* 画像の高さ */
-    overflow: hidden;
-  }
+/*=============== stepイメージイラスト =================*/
+.scroll-wrapper {
+  gap: 0px;
+  margin:20px 0 30px 0;
+}
 
-  .scroll-bar img {
-    width: 9px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: block; /* imgを表示 */
-  }
+.steps-right {
+  margin-right: 5.5px;
+}
 
-  .scroll-bar p {
-    font-size: 12px;
-    left: calc(100% + 6px); /* 画像の右側に配置 */
-    top: 90px;
+.steps-left {
+  margin-left: 5px;
+}
+
+.steps p {
+  font-size: 13px;
+  gap: 1px;
+}
+
+  .sp-title-text-group,
+  .sp-title__sub,
+  .sp-title__main {
+    display: block;
+    text-shadow: 1px 1px 1px #fff
   }
 }
 
@@ -1195,7 +1276,8 @@ main {
 
 /* works */
 .home__works {
-  padding-top: 30vw;
+  padding-top: 10vh;
+  margin-top: 33vw;
 }
 
 .home__works__gallery {
@@ -1756,7 +1838,7 @@ main {
 
 .about-btn-text {
   font-family: Montserrat;
-  font-size: 1.2vw;
+  font-size: 20px;
   font-weight: 500;
   text-align: center;
   margin: 0 auto;
@@ -1918,7 +2000,6 @@ main {
   width: 10px;
   height: 10px;
   margin-left: 8px
-  position: relative;
 }
 
 .about-btn-arrow span::after {
@@ -1961,12 +2042,17 @@ main {
   margin-top: 6vw;
   padding-top: 6vw;
   padding-bottom: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .skill__group--item1,
 .skill__group--item2 {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-top: 60px;
+  width: 100%;
 }
 
 .skill__group--item1 li,
@@ -1983,11 +2069,8 @@ main {
   padding: 30px;
 }
 
-.skill__group--item2 {
-  padding-top: 11vw;
-}
 
-/* html・jQueryのみ 分けて指定(skills 一番下に記載) */
+/* skillテキスト部分 */
 .skills__ttl-wrapper {
   width: 20vw;
   display: flex;
@@ -1999,6 +2082,8 @@ main {
 
 .skill-img {
   width: 4vw;
+  width: 100%;
+  min-height: 40px;
 }
 
 .skills-title {
@@ -2030,49 +2115,24 @@ main {
   opacity: 1;
 }
 
-/* html */
-.skills__html-wrapper {
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  gap: 1.5vw;
-  align-items: center;
-  padding: 20px 7px;
-}
-
-.skills__html-wrapper img {
-  width: 5.5vw;
-}
-
-/* jQuery */
-.skills__jquery-wrapper {
-  /* width: 20vw;
-  display: flex;
-  justify-content: center;
-  gap: 1.2vw;
-  align-items: center;
-  padding: 8px 0; */
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  gap: 1.5vw;
-  align-items: center;
-  padding: 0.3vw 0;
-}
-
-.skills__jquery-wrapper img {
-  width: 14.3vw;
-}
-
 /* skills-bottom */
 .skills-bottom {
-  background-color: #fefefe;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative; /* relativeにしてcircleを含む */
 }
 
 .skills-bottom-wrapper {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1; /* 重なり順を確保 */
+}
+
+.skills-bottom-illust {
+  width: 30%; /* 画像エリアの幅 */
+  background-color: #ffffffa9;
 }
 
 .skills-bottom-content {
@@ -2088,13 +2148,24 @@ main {
   height: 40px; /* 高さを調整 */
 }
 
-.skills-bottom-illust {
-  width: 30%; /* 画像エリアの幅 */
+.skills-circle {
+    /*円の見た目を設定*/
+    width: 40px;
+    height: 40px;
+    transform: scale(1);
+    background-color: #9dc4b742;
+    /*円の位置を画面中央に固定*/
+    position: absolute;
+    left: calc(49.1% - 50px);
+    top: calc(225% - 50px);
+    z-index: -1; /* skills-bottomの背景に設定 */
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease; /* トランジション効果を追加 */
+    overflow-x: hidden;
 }
 
 .skills-bottom-text {
   font-family: Montserrat;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   letter-spacing: 0.004rem;
   margin-top: 0;
@@ -2115,6 +2186,7 @@ main {
   color: #666;
   font-family: Montserrat;
   font-weight: 200;
+  padding-right: 10px;
 }
 
 @keyframes change {
@@ -2139,6 +2211,7 @@ main {
     transform: translate3d(0, -75%, 0);
   }
 }
+
 
 /* sp skills (home)*/
 /* 1000-767px */
@@ -2197,7 +2270,7 @@ main {
     width: 100%;
     max-width: 480px;
     margin: 60px auto;
-    padding: 60px;
+    padding: 20px;
   }
 
   /* .skill__group--item1 li:nth-child(1) {
@@ -2303,7 +2376,7 @@ main {
     width: 100%;
     max-width: 480px;
     margin: 60px auto;
-    padding: 20px;
+    padding: 10px;
   }
 
   /* .skill__group--item1 li:nth-child(1) {
@@ -3905,7 +3978,8 @@ main {
     box-sizing: border-box;
     background-image: url(../img/prof-text-back-06.png);
     background-size: contain;
-
+    background-color: rgb(255, 255, 255, 0.55);
+    background-blend-mode: lighten;
   }
 
   .works__wrap {
