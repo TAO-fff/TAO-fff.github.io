@@ -23,6 +23,13 @@ main {
   padding: 0 0 0 10px; /* 左右の余白を追加 */
 }
 
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+  .content {
+   padding: 0 0 0 0px; 
+}
+}
+
+
 @media screen and (max-width: 767px) {
   main {
     display: block;
@@ -35,44 +42,27 @@ main {
     width: 100%;
     max-width: 747px; /* 767pxから左右のpadding分（10px * 2 = 20px）を引いた値 */
     min-width: unset;
+    padding: 0 0 0 0px; 
   }
 }
 /***レイアウト指定 ***/
-/* 共通クラス */
-/* container worksだけ */
-.container {
-  padding-top: 8vw;
-  padding-right: 5px;
-  padding-bottom: 5vw;
-}
 
-/*top-page（右)*/
+/* 共通クラス */
+/*右側 各コンテンツ*/
 .home__mv {
   padding-top: 0;
   padding-left: 0px;
 }
 
-.home__works {
-  width: 100%;
-  padding: 50px 0;
-  box-sizing: border-box;
-}
 
 .home__about,
-.home__skills,
-.contact {
-  width: 100%;
-  padding: 100px 0;
-  box-sizing: border-box;
+.home__skills {
+  border-top: none;
+  padding-top: 2vw;
+  padding-bottom: 12vh;
 }
 
 /* home セクションタイトル */
-.ttl-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
 .section__ttl {
   width: 35%;
   display: flex;
@@ -194,63 +184,39 @@ main {
     padding-top: 34vw;
   }
 
+  .home__about,
+.home__skills {
+  border-top: none;
+  padding-top: 2vw;
+  padding-bottom: 80px;
+}
+
   .section__ttl-ja {
     font-size: 24px;
+    padding: 0;
   }
 
   .section__ttl-en {
     font-size: 20px;
+    padding: 5px;
   }
 
-  .section__ttl-works {
-    width: 24%;
-  }
-
-  .section__ttl-about {
-    width: 23%;
-  }
-
-  .section__ttl-skill {
-    width: 15%;
-  }
-
-  .section__ttl-contact {
-    width: 18%;
+  .btn {
+    width: 180px;
+    height: 60px;
+    padding: 10px 20px;
+    margin: 0;
   }
 }
 
 /* 767-425px */
 @media screen and (min-width: 425px) and (max-width: 767px) {
-  .container {
-    width: 100%;
-    max-width: 767px;
-  }
-
-  .home__wrap {
-    width: 100%;
-    max-width: 767px;
-    padding-top: 20px;
-    padding-left: 0;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-
-  .home__mv {
-    padding-left: 0px;
-    margin-bottom: 120px;
-  }
-
-  .home__works {
-    padding: 80px 0;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-
+  .home__works,
   .home__about,
   .home__skills,
   .contact {
-    padding: 80px 20px;
-    margin: 0px auto 0 auto;
+    padding: 50px 10px;
+    margin: 0px auto;
     box-sizing: border-box;
   }
 
@@ -262,25 +228,16 @@ main {
   .section__ttl-en {
     font-size: 16px;
     font-weight: 400;
-    padding-left: 25px;
+    padding-left: 5px;
     padding-top: 0;
     margin-bottom: 80px;
   }
 
-  .section__ttl-works {
-    width: 35%;
-  }
-
-  .section__ttl-about {
-    width: 46%;
-  }
-
-  .section__ttl-skill {
-    width: 33%;
-  }
-
-  .section__ttl-contact {
-    width: 43%;
+  .btn {
+    width: 180px;
+    height: 60px;
+    padding: 10px 20px;
+    margin: 0;
   }
 
   /* about・contactページ 一番上のタイトル */
@@ -306,12 +263,12 @@ main {
     margin-bottom: 120px;
   }
 
-  .home__works,
   .home__about,
+  .home__works,
   .home__skills,
   .contact {
-    padding: 80px 20px;
-    margin: 70px auto;
+    padding: 70px 10px;
+    margin: 0 auto;
     box-sizing: border-box;
   }
 
@@ -327,25 +284,9 @@ main {
   .section__ttl-en {
     font-size: 16px;
     font-weight: 400;
-    padding-left: 25px;
+    padding-left: 5px;
     margin-bottom: 30px;
-    width: 100%;
-  }
-
-  .section__ttl-works {
-    width: 44%;
-  }
-
-  .section__ttl-about {
-    width: 40%;
-  }
-
-  .section__ttl-skill {
-    width: 28%;
-  }
-
-  .section__ttl-contact {
-    width: 40%;
+    width: 30%;
   }
 
   /* about・contactページ 一番上のタイトル */
@@ -353,20 +294,6 @@ main {
   .contact__section--ttl {
     font-size: 30px;
     padding: 90px 30px 0 0px;
-  }
-
-  /* ボタン*/
-  .btn {
-    padding: 15px;
-    border: 1px solid #666;
-  }
-
-  .btn::before {
-    content: "";
-    width: -webkit-fill-available;
-    height: 80px;
-    top: 3px;
-    left: 4px;
   }
 }
 /*** 共通クラス ***/
@@ -1061,7 +988,7 @@ main {
   .mv__img img {
     width: 100%;
     max-width: 767px;
-    padding-left: 20px;
+    padding: 10px 0 0 20px;
     box-sizing: border-box;
   }
 
@@ -1093,14 +1020,14 @@ main {
 
   /* 動く人 イラスト */
   .person-yellow {
-    width: 7.4%;
+    width: 7vw;
     position: absolute;
     top: 48%;
     left: 47%;
   }
 
   .person-green {
-    width: 7.3%;
+    width: 7.1vw;
     position: absolute;
     top: 82%;
     left: 56.5%;
@@ -1111,7 +1038,7 @@ main {
   }
 
   .person-beige {
-    width: 8.7%;
+    width: 8.7vw;
     position: absolute;
     top: 0%;
     left: 15%;
@@ -1121,8 +1048,8 @@ main {
   .scroll-bar {
     width: 2.5%;
     position: absolute;
-    left: 28vw;
-    margin-top: -130px;
+    left: 20vw;
+    margin-top: -75px;
   }
 
   /* スクロールbar */
@@ -1153,8 +1080,113 @@ main {
   }
 }
 
-/* 350px～550pxまで */
-@media screen and (max-width: 550px) {
+/* 550～425px */
+@media screen and (min-width: 425px) and (max-width: 550px) {
+  .home__mv {
+    position: relative;
+    top: 0px;
+    left: 0;
+  }
+
+  .mv__img img {
+    width: 100%;
+    max-width: 767px;
+    padding: 10px 0 0 20px;
+    box-sizing: border-box;
+  }
+
+  .title {
+    position: absolute;
+    top: 34%;
+    left: 6%;
+  }
+
+  .title-text-group {
+    padding-top: 10px;
+  }
+
+  /* 日本語 ttl */
+  .title__sub {
+    font-family: senobi-gothic;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.76;
+  }
+
+  /* 名前 ＋ portfolio */
+  .title__main {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 2.6vw;
+    padding-top: 3vw;
+  }
+
+  /* 動く人 イラスト */
+  .person-yellow {
+    width: 11.5vw;
+    position: absolute;
+    top: 39%;
+    left: 45%;
+    z-index: -1;
+  }
+
+  .person-green {
+    width: 12.1vw;
+    position: absolute;
+    top: 15%;
+    left: 50.5%;
+  }
+
+  .person-gray {
+    display: none;
+  }
+
+  .person-beige {
+    width: 14.2vw;
+    position: absolute;
+    top: -1.5%;
+    left: 33%;
+  }
+
+  /* scroll */
+  .scroll-bar {
+    width: 4.5%;
+    position: absolute;
+    left: 8vw;
+    margin-top: -110px;
+  }
+
+  /* スクロールbar */
+
+  /*=============== stepイメージイラスト =================*/
+  .scroll-wrapper {
+    gap: 8px;
+    margin: 20px 0;
+  }
+
+  .steps-right {
+    margin-right: 1.5px;
+  }
+
+  .steps-left {
+    margin-left: 1.5px;
+  }
+
+  .steps-right img,
+.steps-left img {
+  width: 70%;
+  min-width: 14px;
+}
+
+  .sp-title-text-group,
+  .sp-title__sub,
+  .sp-title__main {
+    display: none;
+  }
+}
+
+/* 425px以下 */
+@media screen and (max-width: 425px) {
   .home__mv {
     padding-top: 0;
     box-sizing: border-box;
@@ -1163,7 +1195,9 @@ main {
   .mv__img img {
     width: 100%;
     max-width: 767px;
-    top: 0;
+    top: 5px;
+    padding-left: 25px;
+    box-sizing: border-box;
   }
 
   .title {
@@ -1208,21 +1242,22 @@ main {
 
   /* 動く人 イラスト */
   .person-yellow {
-    width: 7.6%;
+    width: 13.8%;
     position: absolute;
-    top: 41%;
-    left: 46%;
+    top: 40%;
+    left: 44%;
+    z-index: -1;
   }
 
   .person-green {
-    width: 7.8%;
+    width: 14.2%;
     position: absolute;
     top: 16%;
-    left: 54%;
+    left: 51%;
   }
 
   .person-beige {
-    width: 10.8%;
+    width: 16.8%;
     position: absolute;
     top: -3%;
     left: 29%;
@@ -1237,37 +1272,60 @@ main {
   .scroll-bar {
     width: 4.5%;
     position: absolute;
-    left: 20vw;
-    margin-top: -145px;
+    left: 11vw;
+    margin-top: -12vh;
   }
 
   /* スクロールbar */
 
   /*=============== stepイメージイラスト =================*/
   .scroll-wrapper {
-    gap: 0px;
-    margin: 20px 0 30px 0;
+    gap: 5px;
+    margin: 20px 0;
   }
 
+
   .steps-right {
-    margin-right: 5.5px;
+    margin-right: 1.5px;
   }
 
   .steps-left {
-    margin-left: 5px;
+    margin-left: 1.5px;
   }
 
-  .steps p {
-    font-size: 13px;
-    gap: 1px;
-  }
-
+  .steps-right img,
+.steps-left img {
+  width: 70%;
+  min-width: 14px;
+}
   .sp-title-text-group,
   .sp-title__sub,
   .sp-title__main {
     display: block;
     text-shadow: 1px 1px 1px #fff;
   }
+
+  
+/*=============== stepイメージイラスト =================*/
+.scroll-img-container {
+  padding-left: 10px;
+}
+  
+.steps-right {
+  transform: rotate(130deg);
+  margin-right: 7.5px;
+}
+
+.steps-left {
+  transform: rotate(123deg);
+  margin-left: 10px;
+}
+
+.steps-right img,
+.steps-left img {
+  width: 85%;
+  min-width: 14px;
+}
 }
 
 /* 350px以下 */
@@ -1333,7 +1391,7 @@ main {
 }
 
 .side-scroll-item + .side-scroll-item {
-  margin: 0 50px;
+  margin: 0 30px;
 }
 
 .side-scroll-item img {
@@ -1407,6 +1465,7 @@ main {
   top: 45%;
   right: 0%;
 }
+
  .works-button-wrapper a {
   padding: 15px 30px;
  }
@@ -1415,233 +1474,46 @@ main {
 /* sp works */
 /* 1000-767px */
 @media screen and (min-width: 767px) and (max-width: 1000px) {
-  .gallery__group {
-    gap: 5vw;
-  }
-
-  .gallery-item {
-    height: auto;
-  }
-
-  .gallery__group li {
-    width: 25vw;
-  }
-
-  .home__works__gallery {
-    height: auto;
-  }
-
-  .works__gallery-ttl {
-    font-size: 16px;
-  }
-
-  .works__gallery-text {
-    font-family: Zen Kaku Gothic New;
-    font-size: 15px;
-  }
-
-  .person-yellow2 {
-    width: 35px;
+  .side-scroll-item + .side-scroll-item {
+    margin: 0 10px;
   }
 }
 
 /* 767-520px以下 */
 @media screen and (min-width: 520px) and (max-width: 767px) {
-  /* .home__works {
-    padding-top: 48vw;
-  } */
+ .side-scroll {
+  padding: 50px 0 0 0;
+}
 
-  .gallery__group {
-    display: block;
-    padding-top: 0;
-    width: 90%;
-  }
-
-  .gallery__group li {
-    width: 100%;
-    max-width: 767px;
-    height: 450px;
-    padding-top: 75px;
-  }
-
-  .gallery-item {
-    width: 100%;
-    max-width: 767px;
-  }
-
-  .gallery-img {
-    width: 100%;
-  }
-
-  .gallery-item img:hover {
-    transform: scale(1.2);
-    transition: ease-in-out 0.3s;
-  }
-
-  .gallery-item:hover .gallery-img {
-    opacity: 1;
-    filter: blur(0);
-  }
-
-  .hover-container {
-    display: none;
-  }
-
-  .gallery-item:hover .hover-container {
-    opacity: 1;
-  }
-
-  .hover-text {
-    display: none;
-  }
-
-  .home__works__gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 767px;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .works__gallery-ttl {
-    font-size: 16px;
-    padding-top: 20px;
-    font-weight: bold;
-  }
-
-  .works__gallery-text {
-    font-size: 14px;
-    padding-top: 10px;
-    height: 50px;
-  }
-
-  .works__gallery-text span {
-    display: block;
-    padding-top: 5px;
-  }
-
-  .works-slider .slick-track {
-    display: flex;
-    align-items: flex-start;
-    padding: 20px 0 0px 0;
-  }
-
-  .person-yellow2 {
-    display: none;
-  }
-
-  .person-yellow2 img {
-    display: none;
-  }
+/* 横スクロールアイテムのサイズ調整 */
+.side-scroll-item {
+  gap: 15px;
+  width: calc(100vw / 1);
+  height: auto;
+}
 }
 
 @media screen and (max-width: 520px) {
-  /* .home__works {
-    padding: 20px;
-  } */
+  /* 横スクロールアイテムのサイズ調整 */
+.side-scroll-item {
+  display: flex;
+  gap: 15px;
+  width: calc(100vw / 1.1);
+  height: auto;
+}
 
-  .gallery__group {
-    display: block;
-    padding-top: 0;
-    width: 90%;
-  }
+.works-button-wrapper {
+  width: calc(100vw / 1); /* 他のアイテムと同じ幅に設定 */
+}
 
-  .gallery__group li {
-    height: 350px;
-    padding-top: 75px;
-  }
-
-  .gallery-item {
-    position: static;
-    width: 100%;
-    max-width: 767px;
-  }
-
-  .gallery-img {
-    width: 100%;
-  }
-
-  .gallery-item img:hover {
-    transition: ease-in-out 0.3s;
-  }
-
-  .gallery-item:hover .gallery-img {
-    opacity: 1;
-    filter: blur(0);
-  }
-
-  .hover-container {
-    display: none;
-  }
-
-  .gallery-item:hover .hover-container {
-    opacity: 1;
-  }
-
-  .hover-text {
-    display: none;
-  }
-
-  .works-slider .slick-slide {
-    padding-top: 40px;
-  }
-
-  .home__works__gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 520px;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .works__gallery-ttl {
-    font-size: 16px;
-    padding-top: 20px;
-    font-weight: bold;
-  }
-
-  .works__gallery-text {
-    font-size: 14px;
-    padding-top: 10px;
-    height: 50px;
-  }
-
-  .works__gallery-text span {
-    display: block;
-    padding-top: 5px;
-  }
-
-  .works-slider .slick-track {
-    display: flex;
-    align-items: flex-start;
-    padding: 20px 0 0px 0;
-  }
-
-  .slick-list draggable {
-    transform: scale(1.2);
-  }
-
-  .person-yellow2 {
-    display: none;
-  }
-
-  .person-yellow2 img {
-    display: none;
-  }
+.works-button-wrapper a {
+  width: 200px;
+  height: 80px;
+}
 }
 
 /*** works ***/
 /* about */
-.home__about {
-  border-top: none;
-  padding-top: 8vw;
-  padding-bottom: 12vh;
-}
-
   .home__profile__wrap {
     display: flex;
     align-items: center;
@@ -1716,21 +1588,14 @@ main {
 /* sp用 プロフィールimg・text*/
 .sp__profile__wrap,
 .sp__profile-text,
-.sp__profile-img {
+.sp__profile-img,
+.sp-profile-button-wrapper {
   display: none;
 }
 
 
-
-/* about-btn・gallery-work共通   (color・枠線etcは btnで共通クラス) */
-
 /* sp about */
 @media screen and (max-width: 767px) {
-  .home__about {
-    padding-top: 100px;
-    padding-bottom: 30px;
-  }
-
   .home__profile__wrap,
   .profile-text,
   .profile-img {
@@ -1739,125 +1604,58 @@ main {
 
   .sp__profile__wrap {
     display: block;
-    gap: 75px;
-    padding-top: 6vw;
+    gap: 50px;
+    padding-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .sp__profile-img {
     display: block;
-    width: 40%;
-    padding-left: 31%;
-    padding-bottom: 65px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .sp__profile-img img {
+    width: 50%;
+    margin: 0 auto;
   }
 
   .about-btn-inner {
     width: 70%;
   }
 
+  .sp__profile-text-block {
+    display: block;
+    width: 100%;
+  }
+
   .sp__profile-text {
     display: block;
     font-family: Zen Kaku Gothic New;
     width: 100%;
-    max-width: 480px;
     font-size: 16px;
-    line-height: 1.75;
+    line-height: 1.95;
     margin: 0 auto;
     overflow: hidden;
   }
 
+
   .sp__profile-text span {
     display: block;
   }
-  /* ボタン*/
-  .btn {
-    width: 220px;
+
+  .sp-profile-button-wrapper {
+    display: block;
+    margin: 0;
+  }
+
+  .sp-profile-button-wrapper a {
+    width: 200px;
     height: 80px;
-    padding: 15px 20px;
-    border: 1px solid #666;
-    display: flex;
-    align-items: center;
   }
 
-  .btn::before {
-    content: "";
-    width: 220px;
-    height: 80px;
-    top: 5px;
-    left: 4px;
-  }
-
-  /* about-btn・gallery-work共通   (color・枠線etcは btnで共通クラス) */
-  .about-btn-area {
-    margin-top: 100px;
-    text-align: center; /* Align contents to the right */
-    margin-right: 20px;
-  }
-
-  .about-btn-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 8px;
-    width: 100%;
-    min-width: 160px;
-  }
-
-  .about-btn-text {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    margin: 0 auto;
-    color: #222;
-  }
-
-  .about-btn-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-left: 8px;
-  }
-
-  .about-btn:hover .about-btn-arrow {
-    transform: translateX(5px);
-    transition: ease-in-out 0.3s;
-  }
-
-  .about-btn-arrow span {
-    display: block;
-    width: 10px;
-    height: 10px;
-    margin-left: 8px;
-  }
-
-  .about-btn-arrow span::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 7px;
-    background: #222;
-    position: absolute;
-    top: 43%;
-    right: 50%;
-    transform-origin: right center;
-    border-radius: 5vw;
-    transform: rotate(45deg);
-  }
-
-  .about-btn-arrow span::before {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 7px;
-    background: #222;
-    position: absolute;
-    top: 4%;
-    right: 50%;
-    transform-origin: right center;
-    border-radius: 5vw;
-    transform: rotate(-45deg);
-  }
 }
 /**** about ****/
 /* skills */
@@ -1880,8 +1678,6 @@ main {
 .skill__group--item2 {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* padding-top: 60px; */
   width: 100%;
 }
 
@@ -1890,13 +1686,12 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* background-image: url(../img/skill-back-03.png); */
   background-color: #FBFBFB;
   background-blend-mode: lighten;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10px;
-  margin: 10px auto;
+  margin-top: 25px;
 }
 
 /* skillテキスト部分 */
@@ -1940,26 +1735,28 @@ main {
 /* sp skills (home)*/
 /* 1000-767px */
 @media screen and (min-width: 767px) and (max-width: 1000px) {
+  .skills__group {
+    margin-top: 6vw;
+    padding-bottom: 2vh;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
   .skill__group--item1,
   .skill__group--item2 {
     width: 100%;
     max-width: 780px;
     justify-content: space-around;
-    padding: 0 10px;
+    padding: 0;
   }
-
-  /* .skill__group--item2 {
-    display: block;
-    padding-top: 0;
-    gap: 6vw;
-  } */
 
   .skill__group--item1 li,
   .skill__group--item2 li {
     width: 100%;
-    max-width: 480px;
-    margin: 60px auto;
-    padding: 20px 10px;
+    margin: 20px auto;
+    padding: 5px 10px;
   }
 
   .skills__ttl-wrapper,
@@ -1967,148 +1764,135 @@ main {
     width: 100%;
   }
 
-  .skills-text.show {
-    width: 100%;
-    padding: 10px 20px;
-  }
-}
-
-/* 400-767px以下 */
-@media screen and (min-width: 400px) and (max-width: 767px) {
-  .skills__group {
-    padding-top: 0px;
-  }
-
-  .skill__group--item1 {
-    display: block;
-  }
-
-  .skill__group--item2 {
-    display: block;
-    padding-top: 0;
-    gap: 6vw;
-  }
-
-  .skill__group--item1 li,
-  .skill__group--item2 li {
-    width: 100%;
-    max-width: 480px;
-    margin: 60px auto;
-    padding: 20px;
-  }
-
-  /* .skill__group--item1 li:nth-child(1) {
-    padding-top: 0;
-  } */
-
-  /* html・jQueryのみ 分けて指定(skills 一番下に記載) */
-  .skills__ttl-wrapper {
-    width: 100%;
-    max-width: 480px;
-    height: 75px;
-    gap: 3vw;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
   .skill-img {
-    width: 80%;
-  }
-
-  .skills-title {
-    width: 100%;
-    max-width: 120px;
-    font-family: Barlow;
-    font-size: 20px;
-  }
-
-  .skills-text {
-    width: 85%;
-    max-width: 767px;
-    font-size: 16px;
-    padding-top: 23px;
+    width: 60%;
     margin: 0 auto;
   }
-
-  .skills-bottom-illust {
-    width: 40%; /* 画像エリアの幅 */
-  }
-
-  .skills-bottom-text {
-    width: 60%;
-    font-size: 15px;
-  }
-}
-
-/* 400px以下 */
-@media screen and (max-width: 400px) {
-  .skills__group {
-    padding-top: 0px;
-  }
-
-  .skill__group--item1 {
-    display: block;
-  }
-
-  .skill__group--item2 {
-    display: block;
-    padding-top: 0;
-    gap: 6vw;
-  }
-
-  .skill__group--item1 li,
-  .skill__group--item2 li {
-    width: 100%;
-    max-width: 480px;
-    margin: 60px auto;
+  
+  .skills-text {
+    font-family: Zen Kaku Gothic New;
+    font-size: 18px;
+    width:100%;
+    text-align: left;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out;
     padding: 10px;
   }
 
-  /* .skill__group--item1 li:nth-child(1) {
-    padding-top: 0;
-  } */
-
-  /* html・jQueryのみ 分けて指定(skills 一番下に記載) */
-  .skills__ttl-wrapper {
+  .skills-text.show {
     width: 100%;
-    max-width: 480px;
-    height: 65px;
-    gap: 3vw;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 10px;
+  }
+}
+
+/* 425-767px以下 */
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .skills__group {
+    padding-top: 20px;
+    padding-right: 0;
+    }
+
+    .skill__group--item1,
+    .skill__group--item2 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .skill__group--item1 li,
+    .skill__group--item2 li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #FBFBFB;
+      background-blend-mode: lighten;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 10px;
+      margin: 10px;
+    }
+    
+    /* skillテキスト部分 */
+    .skills__ttl-wrapper {
+      width:80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+    }
+    
+    .skill-img {
+      width: 100%;
+      min-height: 40px;
+    }
+    
+    .skills-text {
+      font-family: Zen Kaku Gothic New;
+      font-size: 16px;
+      width:100%;
+      text-align: left;
+      line-height: 1.7;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-in-out;
+      padding: 10px;
+    }
+    
+}
+
+/* 400px以下 */
+@media screen and (max-width: 425px) {
+  .skills__group {
+    padding: 0px;
   }
 
-  .skill-img {
-    width: 80%;
-  }
-
-  .skills-title {
-    width: 100%;
-    max-width: 120px;
-    font-family: Barlow;
-    font-size: 20px;
-  }
-
-  .skills-text {
-    width: 85%;
-    max-width: 767px;
-    font-size: 16px;
-    padding-top: 23px;
-    margin: 0 auto;
-  }
-
-  /* skill botom */
-  .skills-bottom-illust {
-    width: 27%; /* 画像エリアの幅 */
-  }
-
-  .skills-bottom-text {
-    font-size: 15px;
-  }
+  .skill__group--item1,
+    .skill__group--item2 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .skill__group--item1 li,
+    .skill__group--item2 li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #FBFBFB;
+      background-blend-mode: lighten;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 10px;
+      margin: 10px;
+    }
+    
+    /* skillテキスト部分 */
+    .skills__ttl-wrapper {
+      width:80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+    }
+    
+    .skill-img {
+      width: 100%;
+      min-height: 40px;
+    }
+    
+    .skills-text {
+      font-family: Zen Kaku Gothic New;
+      font-size: 16px;
+      width:100%;
+      text-align: left;
+      line-height: 1.7;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-in-out;
+      padding: 10px;
+    }
 }
 
 /*** skills ***/
