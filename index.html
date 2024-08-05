@@ -193,7 +193,6 @@
 
           <!-- works -->
           <section class="home__works container">
-            <div class="ttl-block">
               <div class="section__ttl" id="works">
                 <h2 class="section__ttl-ja js-splitText js-text-effect" id="01">
                   デザインしてます。
@@ -207,7 +206,6 @@
               >
                 WORKS
               </p>
-            </div>
             <div class="home__works__gallery works-slider">
               <!-- works -->
               <section class="side-scroll section">
@@ -327,7 +325,7 @@
                         </a>
                         <div class="works__gallery-textarea">
                           <div class="works__gallery-ttl">
-                            <p>携帯会社 料金プランのバナー</p>
+                            <p>携帯会社 料金プランバナー</p>
                           </div>
                           <div class="works__gallery-tool">
                           <p>
@@ -431,12 +429,14 @@
 
           <!-- sp profileイラスト・文章 -->
           <div class="sp__profile__wrap">
+            <div class="sp__profile-img">
             <img
               src="./img/profile-img@2x-8.png"
               alt="プロフィールイラスト"
-              class="sp__profile-img"
             />
-            <p class="sp__profile-text">
+          </div>
+            <div class="sp__profile-text-block">
+              <p class="sp__profile-text">
               <span>とこよだ あけみ</span>
               <span>神奈川県在住で、千葉県の端っこ生まれ。</span>
               <br />
@@ -454,6 +454,10 @@
                 >あなたのアイデアや想いを形にするお手伝いができればと思っています。
               </span>
             </p>
+            </div>
+            <div class="sp-profile-button-wrapper">
+              <a class="btn" href="./profile.html"><span class="button_text">View more</span></a>
+            </div>
           </div>
           </section>
           <!-- //about -->
@@ -521,7 +525,9 @@
               <ul class="skill__group--item2">
                 <li>
                   <div class="skills__ttl-wrapper">
-                    <img src="./img/HTML-CSS.svg" alt="HTMLとCSSができます。" />
+                    <img src="./img/HTML-CSS.svg" alt="HTMLとCSSができます。" 
+                    class="skill-img"
+                    />
                   </div>
                   <p class="skills-text">
                     Webサイトを一から構築するための、HTML・CSSコーディングが可能です。メインで使用しているエディタはVisual
@@ -533,6 +539,7 @@
                     <img
                       src="./img/jQuery.svg"
                       alt="ホームページに動きがつけられます。"
+                      class="skill-img"
                     />
                   </div>
                   <p class="skills-text">
@@ -594,9 +601,7 @@
           </section>
           <!-- //contact -->
         </div>
-      </div>
 
-      </div>
     </main>
     <!-- //スクロールエリア終了  -->
 
