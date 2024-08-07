@@ -175,23 +175,46 @@ $(document).ready(function () {
 // worksの横スクロール
 const listWrapperEl = document.querySelector(".side-scroll-list-wrapper");
 const listEl = document.querySelector(".side-scroll-list");
+const firstItem = document.querySelector('.side-scroll-item');
 
 // スクロール終了位置の計算
-const endScrollPosition = listEl.scrollWidth - listWrapperEl.clientWidth;
+const calculateEndScrollPosition = () => Math.max(0, listEl.scrollWidth - listWrapperEl.clientWidth);
+let endScrollPosition = calculateEndScrollPosition();
 
-gsap.to(listEl, {
-  x: () => -endScrollPosition, // 横方向のスクロール
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".home__works",
-    start: "top top", // スクロール開始位置
-    end: () => `+=${endScrollPosition}`, // 横スクロールの終了位置
-    scrub: true,
-    pin: true,
-    anticipatePin: 1,
-    invalidateOnRefresh: true, // リサイズ時に再計算
-  },
+// .side-scroll-itemの高さを設定
+const setListWrapperHeight = () => {
+  if (firstItem) {
+    listWrapperEl.style.height = `${firstItem.clientHeight}px`;
+  }
+};
+
+// ページ読み込み時に高さを設定
+window.addEventListener('load', () => {
+  setListWrapperHeight();
+  endScrollPosition = calculateEndScrollPosition();
+  gsap.to(listEl, {
+    x: () => -endScrollPosition, // 横方向のスクロール
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".home__works",
+      start: "top top", // スクロール開始位置
+      end: () => `+=${endScrollPosition}`, // 横スクロールの終了位置
+      scrub: true,
+      pin: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true, // リサイズ時に再計算
+    },
+  });
 });
+
+// リサイズ時にも高さを再設定
+window.addEventListener('resize', () => {
+  setListWrapperHeight();
+  endScrollPosition = calculateEndScrollPosition();
+});
+
+
+
 
 // ボタンのアクション
 document.addEventListener("DOMContentLoaded", function() {
