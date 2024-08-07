@@ -1515,6 +1515,10 @@ main {
   width: calc(100vw / 1); /* 他のアイテムと同じ幅に設定 */
 }
 
+.works__gallery-ttl p {
+  font-size: 12px
+}
+
 .works-button-wrapper a {
   width: 200px;
   height: 80px;
