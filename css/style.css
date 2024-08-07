@@ -1519,6 +1519,10 @@ main {
   font-size: 12px
 }
 
+.works__gallery-tool p {
+  font-size: 12px
+}
+
 .works-button-wrapper a {
   width: 200px;
   height: 80px;
