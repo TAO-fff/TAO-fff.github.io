@@ -1364,7 +1364,6 @@ main {
 .side-scroll-list-wrapper {
   position: relative;
   width: 100%;  /* 親要素に合わせて全幅 */
-  height: calc(100vh - 700px); /* ビューポートの高さから次のコンテンツとのスペースを引く */
   overflow: hidden; /* 必要に応じて調整 */
 }
 
@@ -1379,6 +1378,15 @@ main {
 
 /* 横スクロールアイテムのサイズ調整 */
 .side-scroll-item {
+  /* display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+  width: calc(100vw / 3.5);
+  height: auto;
+  min-height: 45vh;
+  font-size: 32px;
+  font-weight: 700; */
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -1388,6 +1396,7 @@ main {
   min-height: 45vh;
   font-size: 32px;
   font-weight: 700;
+  box-sizing: border-box;
 }
 
 .side-scroll-item + .side-scroll-item {
