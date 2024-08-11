@@ -1389,7 +1389,7 @@ main {
   content: "";
   position: absolute;
   background: #9dc4b7; /* 線の色を指定 */
-  z-index: 0; /* 矢印の下に線を表示するため */
+  z-index: 0; 
 }
 
 .scrolldown1::after {
@@ -1550,8 +1550,31 @@ main {
 
 /* 767-520px以下 */
 @media screen and (min-width: 520px) and (max-width: 767px) {
+  .works-scroll-area {
+    top: 3%;
+    left: 43%;
+    gap: 5px;
+}
+
+.scrolldown1::after {
+  height: 15px; /* 縦の線の高さ */
+}
+
+.scrolldown1::before {
+  width: 6px;
+}
+
+
+.works-scroll-area p {
+  font-size: 12px;
+  color: #fbfbfb;
+  letter-spacing: 0.08rem;
+  background-color: #9dc4b7;
+  padding: 5px;
+}
+  
   .side-scroll {
-    padding: 50px 0 0 0;
+    padding: 100px 0 0 0;
   }
 
   /* 横スクロールアイテムのサイズ調整 */
@@ -1563,6 +1586,33 @@ main {
 }
 
 @media screen and (max-width: 520px) {
+  .side-scroll {
+    padding: 115px 0 0 0;
+  }
+  
+  .works-scroll-area {
+    top: 160px;
+    left: 43%;
+    gap: 5px;
+}
+
+.scrolldown1::after {
+  height: 15px; /* 縦の線の高さ */
+}
+
+.scrolldown1::before {
+  width: 6px;
+}
+
+
+.works-scroll-area p {
+  font-size: 10px;
+  color: #fbfbfb;
+  letter-spacing: 0.08rem;
+  background-color: #9dc4b7;
+  padding: 5px;
+}
+
   /* 横スクロールアイテムのサイズ調整 */
   .side-scroll-item {
     display: flex;
@@ -1764,7 +1814,7 @@ main {
   padding: 10px;
   margin-top: 25px;
   max-width: 1680px;
-  border: 20px solid #9dc4b74e;
+  border: 15px solid #9dc4b74e;
 }
 
 /* skillテキスト部分 */
@@ -1865,8 +1915,7 @@ main {
     padding-right: 0;
   }
 
-  .skill__group--item1,
-  .skill__group--item2 {
+  .skill__group--item {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1893,8 +1942,10 @@ main {
   }
 
   .skill-img {
-    width: 100%;
+    width: 60%;
+    min-width: 240px;
     min-height: 40px;
+    margin: 0 auto;
   }
 
   .skills-text {
@@ -1928,6 +1979,7 @@ main {
     background-repeat: no-repeat;
     padding: 10px;
     margin: 10px;
+    border: 8px solid #9dc4b74e;
   }
 
   /* skillテキスト部分 */
