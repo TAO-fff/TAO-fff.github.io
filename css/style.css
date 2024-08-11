@@ -62,10 +62,6 @@ main {
   padding: 12vh 0;
 }
 
-.home__about {
-  margin-top: 12vh;
-}
-
 .contact__wrapper  {
   margin-bottom: 12vh;
 }
@@ -2140,7 +2136,6 @@ main {
   width: 100%;
   border-bottom: 1px solid #333;
   padding-top: 50px;
-  margin-top: 12vh;
 }
 
 .person-redpair-img {
