@@ -270,44 +270,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /**** skills ****/
-// skills  bgc変更
-document.addEventListener('DOMContentLoaded', function () {
-  gsap.registerPlugin(ScrollTrigger);
+// skills  scroll-trigger
+// GSAPとScrollTriggerの読み込み
+gsap.registerPlugin(ScrollTrigger);
 
-  gsap.utils.toArray('.skill__group--item1 li, .skill__group--item2 li').forEach((li, index, arr) => {
-    const skillsText = li.querySelector('.skills-text');
-
-    ScrollTrigger.create({
-      trigger: li,
-      start: 'top 80%',
-      end: 'bottom top',
-      onEnter: () => {
-        gsap.to(li, { backgroundColor: '#9dc4b788', duration: 0.5 });
-        gsap.to(skillsText, { backgroundColor: 'transparent', duration: 0.5 });
-      },
-      onLeave: () => {
-        gsap.to(li, { backgroundColor: '#FBFBFB', duration: 0.5 });
-        gsap.to(skillsText, { backgroundColor: '#FBFBFB', duration: 0.5 });
-      },
-      onEnterBack: () => {
-        gsap.to(li, { backgroundColor: '#9dc4b788', duration: 0.5 });
-        gsap.to(skillsText, { backgroundColor: 'transparent', duration: 0.5 });
-      },
-      onLeaveBack: () => {
-        gsap.to(li, { backgroundColor: '#FBFBFB', duration: 0.5 });
-        gsap.to(skillsText, { backgroundColor: '#FBFBFB', duration: 0.5 });
-      },
-    });
-
-    // 初期設定
-    gsap.set(li, { backgroundColor: '#FBFBFB' });
-    gsap.set(skillsText, { backgroundColor: '#FBFBFB' });
-  });
+// アニメーションの設定
+gsap.from(".skill__group--item li", {
+  opacity: 0,
+  x: 500,
+  y: 100, // 初期位置を少し下に設定
+  stagger: 1, // 各要素のアニメーションの遅延時間
+  duration: 1, // アニメーションの持続時間
+  ease: "power1.out", // イージングの設定
+  scrollTrigger: {
+    trigger: ".skills__group", // アニメーションのトリガーとなる要素
+    start: "top top", // トリガーの開始位置
+    end: "bottom end", // トリガーの終了位置
+  }
 });
 
 
 
-
+// topボタン
 // top-btn 1000px以下の時、200pxスクロールしたら出てくる
 document.addEventListener("DOMContentLoaded", function () {
   const topBtn = document.querySelector(".top-btn");
