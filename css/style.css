@@ -1449,6 +1449,7 @@ main {
   display: flex;
   align-items: center;
   gap: 0 60px;
+  width: calc(100vw * (アイテムの数 / 3.5)); /* アイテムの数に応じて調整 */
 }
 
 /* 横スクロールアイテムのサイズ調整 */
@@ -1487,24 +1488,22 @@ main {
 }
 
 .works__gallery-textarea {
-  padding: 10px 5px 5px 5px;
+  padding: 10px 5px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
   flex-wrap: wrap;
   width: 100%;
 }
 
 .works__gallery-ttl p {
-  font-family: Montserrat;
+  font-family:Zen Kaku Gothic New;
   font-size: 14px;
   font-weight: lighter;
   text-align: center;
   display: block;
   padding: 10px;
-  color: #f5f5f5;
-  background-color: #333333da;
+  color: #333333da;
   letter-spacing: 0.03rem;
   line-height: 1.45;
 }
@@ -1514,19 +1513,17 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 10px;
-  padding-top: 10px;
+  gap: 5px;
 }
 
 .works__gallery-tool p {
-  font-family: Montserrat;
+  font-family: Zen Kaku Gothic New;
   font-size: 14px;
   font-weight: lighter;
   text-align: center;
   display: block;
-  padding: 10px;
-  color: #f5f5f5;
-  background-color: #333333da;
+  padding: 5px;
+  color: #333333da;
   letter-spacing: 0.03rem;
   line-height: 1.45;
 }
