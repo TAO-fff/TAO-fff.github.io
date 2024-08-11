@@ -274,14 +274,18 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.utils.toArray('.skill__group--item1 li, .skill__group--item2 li').forEach(li => {
+  gsap.utils.toArray('.skill__group--item1 li, .skill__group--item2 li').forEach((li, index, arr) => {
     const skillsText = li.querySelector('.skills-text');
-    
+
     ScrollTrigger.create({
       trigger: li,
-      start: 'top 80%', // liがビューポートの80%位置に来たときにトリガー
-      end: 'bottom', // liがビューポートの20%位置を過ぎたときに終了
+      start: 'top 80%',
+      end: 'bottom top',
       onEnter: () => {
+        gsap.to(li, { backgroundColor: '#9dc4b788', duration: 0.5 });
+        gsap.to(skillsText, { backgroundColor: 'transparent', duration: 0.5 });
+      },
+      onLeave: () => {
         gsap.to(li, { backgroundColor: '#FBFBFB', duration: 0.5 });
         gsap.to(skillsText, { backgroundColor: '#FBFBFB', duration: 0.5 });
       },
@@ -290,12 +294,18 @@ document.addEventListener('DOMContentLoaded', function () {
         gsap.to(skillsText, { backgroundColor: 'transparent', duration: 0.5 });
       },
       onLeaveBack: () => {
-        gsap.to(li, { backgroundColor: '#9dc4b788', duration: 0.5 });
-        gsap.to(skillsText, { backgroundColor: 'transparent', duration: 0.5 });
+        gsap.to(li, { backgroundColor: '#FBFBFB', duration: 0.5 });
+        gsap.to(skillsText, { backgroundColor: '#FBFBFB', duration: 0.5 });
       },
     });
+
+    // 初期設定
+    gsap.set(li, { backgroundColor: '#FBFBFB' });
+    gsap.set(skillsText, { backgroundColor: '#FBFBFB' });
   });
 });
+
+
 
 
 // top-btn 1000px以下の時、200pxスクロールしたら出てくる
