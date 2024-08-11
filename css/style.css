@@ -1349,7 +1349,7 @@ main {
 .works-scroll-area {
   position: absolute;
   top: 11%;
-  left: -15.5%;
+  left: -15%;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -1363,6 +1363,7 @@ main {
 .works-scroll-area p {
   font-family: Montserrat;
   font-size: 14px;
+  font-weight: 400;
   /* color: #666; */
   letter-spacing: .1rem;
   color: #9dc4b7;
@@ -1392,7 +1393,7 @@ main {
 }
 
 .scrolldown1::after {
-  width: .1px; /* 縦の線の太さ */
+  width: .5px; /* 縦の線の太さ */
   height: 20px; /* 縦の線の高さ */
   bottom: 10px; /* 縦の線の下の位置 */
   left: 50%;
@@ -1401,9 +1402,9 @@ main {
 
 .scrolldown1::before {
   width: 8px;
-  height: .1px;
+  height: .5px;
   bottom: 13px;
-  left: 55%;
+  left: 56.5%;
   transform: translateX(-50%) rotate(-45deg);
   border-radius: 50%;
 }
@@ -1747,15 +1748,13 @@ main {
   align-items: flex-start;
 }
 
-.skill__group--item1,
-.skill__group--item2 {
+.skill__group--item {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.skill__group--item1 li,
-.skill__group--item2 li {
+.skill__group--item li {
   display: flex;
   align-items: center;
   background-blend-mode: lighten;
@@ -1781,6 +1780,10 @@ main {
   min-height: 40px;
 }
 
+.skill-img:hover {
+  transform: rotate(-5deg);
+}
+
 .skills-text {
   font-family: Zen Kaku Gothic New;
   font-size: 18px;
@@ -1788,9 +1791,7 @@ main {
   text-align: left;
   line-height: 1.7;
   opacity: 1;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-in-out;
-  background-color: #fbfbfb;
+  background-color: #fbfbfb
 }
 
 .skills-text.show {
@@ -1817,16 +1818,14 @@ main {
     align-items: flex-start;
   }
 
-  .skill__group--item1,
-  .skill__group--item2 {
+  .skill__group--item {
     width: 100%;
     max-width: 780px;
     justify-content: space-around;
     padding: 0;
   }
 
-  .skill__group--item1 li,
-  .skill__group--item2 li {
+  .skill__group--item li {
     width: 100%;
     margin: 20px auto;
     padding: 5px 10px;
@@ -1843,14 +1842,11 @@ main {
   }
 
   .skills-text {
-    font-family: Zen Kaku Gothic New;
     font-size: 18px;
     width: 100%;
     text-align: left;
     line-height: 1.7;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
     padding: 10px;
   }
 
@@ -1874,12 +1870,10 @@ main {
     width: 100%;
   }
 
-  .skill__group--item1 li,
-  .skill__group--item2 li {
+  .skill__group--item li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fbfbfb;
     background-blend-mode: lighten;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1902,14 +1896,10 @@ main {
   }
 
   .skills-text {
-    font-family: Zen Kaku Gothic New;
     font-size: 16px;
     width: 100%;
     text-align: left;
     line-height: 1.7;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-in-out;
     padding: 10px;
   }
 }
@@ -1927,12 +1917,10 @@ main {
     width: 100%;
   }
 
-  .skill__group--item1 li,
-  .skill__group--item2 li {
+  .skill__group--item li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fbfbfb;
     background-blend-mode: lighten;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1955,14 +1943,10 @@ main {
   }
 
   .skills-text {
-    font-family: Zen Kaku Gothic New;
     font-size: 16px;
     width: 100%;
     text-align: left;
     line-height: 1.7;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-in-out;
     padding: 10px;
   }
 }
