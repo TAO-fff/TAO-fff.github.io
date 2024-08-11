@@ -1357,6 +1357,7 @@ main {
   gap: 13px;
   opacity: 0; /* 初期状態は透明にする */
   transition: opacity 0.5s ease-in-out; /* フェードイン・アウトのトランジション効果 */
+  padding-left: 5px;
 }
 
 .works-scroll-area p {
@@ -1756,15 +1757,14 @@ main {
 .skill__group--item1 li,
 .skill__group--item2 li {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  background-color: #fbfbfb;
   background-blend-mode: lighten;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10px;
   margin-top: 25px;
   max-width: 1680px;
+  background-color: #fbfbfb;
 }
 
 /* skillテキスト部分 */
