@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -26,6 +27,39 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    
+    <!-- adobe font -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "jyq2xel",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -40,7 +74,7 @@
         <ul class="header__nav">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../works-gallery.html">Works</a></li>
-          <li><a href="../about.html">About</a></li>
+          <li><a href="../profile.html">About</a></li>
           <li><a href="../contact.html">Contact</a></li>
         </ul>
   
@@ -50,7 +84,7 @@
           <ul class="sp__nav__list">
             <li><a href="../index.html">Home</a></li>
           <li><a href="../works-gallery.html">Works</a></li>
-          <li><a href="../about.html">About</a></li>
+          <li><a href="../profile.html">About</a></li>
           <li><a href="../contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -113,17 +147,26 @@
           <section class="contact">
             <!-- section-ttl  共通クラス -->
             <div class="section__ttl" id="contact">
-              <p class="section__ttl-ja">お気軽にご相談ください。</p>
-              <p class="section__tti-en">CONTACT</p>
+              <h2 class="section__ttl-ja">お気軽にご相談ください。</h2>
+              <img src="../img/ttl-back.png" alt="ふき出し">
             </div>
+
+              <p
+                class="section__ttl-en section__ttl-contact"
+                id="contactTitle"
+                data-text="CONTACT"
+              >
+                CONTACT
+              </p>
             <!-- //section-ttl -->
-             <!-- contact form -->
-             <div class="contact__wrapper">
+            <!-- contact form -->
+            <div class="contact__wrapper">
               <p class="contact-form__text">
                 <span
                   >業務に関するご相談・お問い合わせ、当サイトに対するメッセージは
-                  お問い合わせフォームより承ります。</span>
-                
+                  お問い合わせフォームより承ります。</span
+                >
+
                 <span>3日以内にお返事させていただきます。</span>
               </p>
               <div class="contact-btn-area">
@@ -141,48 +184,53 @@
       </main>
       <!-- //スクロールエリア終了  -->
   
-         <!-- footer -->
-      <!-- footer top illust -->
-      <footer class="footer">
+  <!-- footer -->
+    <!-- footer top illust -->
+    <footer class="footer">
+      <div class="person-red">
         <div class="person-red">
-          <div class="person-red">
-            <img class="../person-red-img" src="./img/person-red@2x-8.png" alt="" />
-            <img class="../person-redpair-img" src="./img/person-redpair@2x-8.png" alt="" />
-          </div>
+          <img class="person-red-img" src="../img/person-red@2x-8.png" alt="" />
+          <img
+            class="person-redpair-img"
+            src="../img/person-redpair@2x-8.png"
+            alt=""
+          />
         </div>
-  
-        <!-- footer sitemap＆sns -->
+      </div>
+
+      <!-- footer sitemap＆sns -->
+      <div class="footer-container">
         <div class="footer__wrapper">
           <!-- sitemap  footer-ttl部分のみ共通クラス-->
           <!-- footer left -->
-          <div class="footer-img-left">
-            <img src="../img/footer-left@2x-100.jpg" alt="足あとイラスト" />
-          </div>
+          <!-- <div class="footer-img-left">
+          <img src="./img/footer-left@2x-100.jpg" alt="足あとイラスト" />
+        </div> -->
           <!-- //footer left -->
-  
+
           <div class="sitemap__area">
             <div class="footer-ttl-text">
               <p class="footer-ttl-map">SITE MAP</p>
             </div>
             <div class="sitemap__nav">
               <ul class="sitemap-item">
-                <a href="../index.html">
+                <a href="../works-gallery.html">
                   <li>
-                    <p class="sitemap-item-en">HOME</p>
-                    <p class="sitemap-item-ja">きっかけはお手伝い。</p>
+                    <p class="sitemap-item-en">WORKS</p>
+                    <p class="sitemap-item-ja">デザインしてます。</p>
                   </li>
                 </a>
               </ul>
-  
+
               <ul class="sitemap-item">
-                <a href="../about.html">
+                <a href="../profile.html">
                   <li>
                     <p class="sitemap-item-en">ABOUT</p>
                     <p class="sitemap-item-ja">はじめまして。</p>
                   </li>
                 </a>
               </ul>
-  
+
               <ul class="sitemap-item">
                 <a href="../contact.html">
                   <li>
@@ -212,7 +260,10 @@
             </div>
             <div class="sns-icon">
               <a href="" target="_blank" rel="noopener noreferrer">
-                <img src="../img/top-sns-x@2x-8.png" alt="エックス  アカウント" />
+                <img
+                  src="../img/top-sns-x@2x-8.png"
+                  alt="エックス  アカウント"
+                />
               </a>
             </div>
             <!-- sp sns -->
@@ -237,18 +288,21 @@
           <!-- //sns -->
           <!-- footer right -->
           <div class="footer-img-right">
-            <div class="top-btn">
-              <a href="#top" id="back-to-top-btn">
+            <a href="#top" id="back-to-top-btn">
+              <div class="top-btn">
                 <div class="top-btn-arrow"><span></span></div>
                 <img src="../img/footer_right_1@2x-8.png" alt="足あとマーク" />
-                <p class="top-btn-text">BACK<span> TO</span> <span>TOP</span></p>
-              </a>
-            </div>
+                <!-- <p class="top-btn-text">
+                  BACK<span> TO</span> <span>TOP</span>
+                </p> -->
+              </div>
+            </a>
           </div>
           <!-- //footer right -->
         </div>
-        <p class="copyright">© 2024 Akemi Tokoyoda portforio site</p>
-      </footer>
+        <p class="copyright">© 2024 Akemi Tokoyoda portfolio site</p>
+      </div>
+    </footer>
 
     <!-- jQuery/js -->
     <script>
