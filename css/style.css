@@ -1623,6 +1623,7 @@ main {
 
 .profile-img {
   width: 12vw;
+  max-width: 150px;
   position: relative; /* 位置を調整 */
   z-index: 2; /* ボタンより前面に表示 */
 }
@@ -1651,7 +1652,7 @@ main {
 .profile-button-wrapper {
   display: flex;
   justify-content: center; /* ボタンを中央に配置 */
-  margin-top: -3vw; /* 画像と重なる位置に調整 */
+  margin-top: 30px; /* 画像と重なる位置に調整 */
   position: relative; /* 位置を調整 */
   z-index: 1; /* 画像の下に表示 */
   width: calc(100vw / 3); /* 他のアイテムと同じ幅に設定 */
@@ -1763,7 +1764,7 @@ main {
   padding: 10px;
   margin-top: 25px;
   max-width: 1680px;
-  background-color: #fbfbfb;
+  border: 20px solid #9dc4b74e;
 }
 
 /* skillテキスト部分 */
@@ -1787,11 +1788,12 @@ main {
 .skills-text {
   font-family: Zen Kaku Gothic New;
   font-size: 18px;
+  color: #222;
   width: 60%;
   text-align: left;
   line-height: 1.7;
   opacity: 1;
-  background-color: #fbfbfb
+  background-color: transparent;
 }
 
 .skills-text.show {
