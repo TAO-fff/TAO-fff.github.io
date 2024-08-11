@@ -143,7 +143,7 @@ $(document).ready(function () {
 
 
 /**** works（横スクロール・スクロールとheader inout） ****/
-// worksの横スクロール
+// worksの横スクロール + header-nav
 const listWrapperEl = document.querySelector(".side-scroll-list-wrapper");
 const listEl = document.querySelector(".side-scroll-list");
 const firstItem = document.querySelector('.side-scroll-item');
@@ -181,18 +181,16 @@ window.addEventListener('load', () => {
 
   // works-scroll-areaのフェードイン・フェードアウトのアニメーションを追加
   gsap.fromTo(".works-scroll-area", 
-    { opacity: 0 }, 
+    { opacity: 1 }, 
     {
-      opacity: 1, 
+      opacity: 0, 
       scrollTrigger: {
         trigger: ".side-scroll-list-wrapper",
-        start: "top 1%",  // フェードイン開始位置
-        end: () => `+=${endScrollPosition}`, // フェードアウト終了位置
-        scrub: true, // スクロールに合わせてアニメーション
-        onEnter: () => gsap.to("#header", { opacity: .8, duration: 0.5 }), // フェードアウト
-        onLeave: () => gsap.to("#header", { opacity: 1, duration: 0.5 }), // フェードイン
-        onEnterBack: () => gsap.to("#header", { opacity: 0, duration: 0.5 }), // 戻るときに非表示
-        onLeaveBack: () => gsap.to("#header", { opacity: 1, duration: 0.5 }) // 戻るときに再表示
+        start: "top top",  // スクロール開始位置
+        end: () => `bottom+=${endScrollPosition} top`,  // .side-scroll-list-wrapper の最後までスクロールした時点でフェードアウト
+        scrub: true,
+        onLeave: () => gsap.to(".works-scroll-area", { opacity: 0, duration: 0.5 }),  // フェードアウト
+        onEnterBack: () => gsap.to(".works-scroll-area", { opacity: 1, duration: 0.5 })  // 戻ってきたときに再度フェードイン
       }
     }
   );
@@ -209,7 +207,8 @@ var startPos = 0;
 var winScrollTop = 0;
 const Header = $("#header"); //id headerをHeaderへ入れる
 const Footer = $(".footer__wrapper"); //.footer__wrapperをFooterへ入れる
-const worksTriggerPoint = $(".side-scroll-list-wrapper").offset().top; // works-scroll-areaの開始位置
+const homeWorksTop = $(".home__works").offset().top; // home__worksの位置
+const worksTriggerPoint = homeWorksTop - 50; // works-scroll-areaの50px上
 
 $(window).on("scroll", function () {
   winScrollTop = $(this).scrollTop();
@@ -221,7 +220,7 @@ $(window).on("scroll", function () {
       $(Header).addClass("is-hide");
     } else {
       // works-scroll-areaが表示される位置でheader-navを隠す
-      if (winScrollTop >= worksTriggerPoint && winScrollTop <= (worksTriggerPoint + endScrollPosition)) {
+      if (winScrollTop >= worksTriggerPoint && winScrollTop <= (worksTriggerPoint + endScrollPosition + 50)) {
         $(Header).addClass("is-hide");
       } else {
         $(Header).removeClass("is-hide");
@@ -229,7 +228,7 @@ $(window).on("scroll", function () {
     }
   } else {
     // スクロールアップ時のheader-nav表示/非表示
-    if (winScrollTop >= worksTriggerPoint && winScrollTop <= (worksTriggerPoint + endScrollPosition)) {
+    if (winScrollTop >= worksTriggerPoint && winScrollTop <= (worksTriggerPoint + endScrollPosition + 50)) {
       $(Header).addClass("is-hide");
     } else {
       $(Header).removeClass("is-hide");
@@ -245,10 +244,7 @@ $(window).on("scroll", function () {
 
 
 
-
-
 /**** design・about ボタン ****/
-
 // ボタンのアクション
 document.addEventListener("DOMContentLoaded", function() {
   const btns = document.querySelectorAll(".btn");
@@ -284,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ScrollTrigger.create({
       trigger: li,
       start: 'top 80%', // liがビューポートの80%位置に来たときにトリガー
-      end: 'bottom 20%', // liがビューポートの20%位置を過ぎたときに終了
+      end: 'bottom', // liがビューポートの20%位置を過ぎたときに終了
       onEnter: () => {
         gsap.to(li, { backgroundColor: '#FBFBFB', duration: 0.5 });
         gsap.to(skillsText, { backgroundColor: '#FBFBFB', duration: 0.5 });
