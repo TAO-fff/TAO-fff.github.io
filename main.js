@@ -274,20 +274,27 @@ document.addEventListener("DOMContentLoaded", function() {
 // GSAPとScrollTriggerの読み込み
 gsap.registerPlugin(ScrollTrigger);
 
-// アニメーションの設定
+// 各 li タグに対して個別にアニメーションを設定
 gsap.from(".skill__group--item li", {
   opacity: 0,
-  x: 500,
-  y: 100, // 初期位置を少し下に設定
-  stagger: 1, // 各要素のアニメーションの遅延時間
-  duration: 1, // アニメーションの持続時間
-  ease: "power1.out", // イージングの設定
-  scrollTrigger: {
-    trigger: ".skills__group", // アニメーションのトリガーとなる要素
-    start: "top top", // トリガーの開始位置
-    end: "bottom end", // トリガーの終了位置
+  x: 500, // 初期位置を500ピクセル右に設定
+  y: 100, // 初期位置を100ピクセル下に設定
+  duration: 1.8, // アニメーションの持続時間
+  ease: "power1.inOut", // イージングの設定
+  stagger: {each: 0.6},  scrollTrigger: {
+    trigger: ".skills__group", // トリガーとなる要素
+    start: "top 95%", // トリガーの開始位置
+    end: "bottom 20%", // トリガーの終了位置
+    scrub: false, // スクロールに連動せず、スクロール時にアニメーションが進行
+    toggleActions:'play none none reverse',
   }
 });
+
+
+
+
+
+
 
 
 
