@@ -1598,11 +1598,10 @@ main {
 
 .scrolldown1::after {
   height: 15px; /* 縦の線の高さ */
-  width: 2px;
+}
 
 .scrolldown1::before {
   width: 6px;
-  height: 2px;
 }
 
 
@@ -1809,9 +1808,6 @@ main {
 .skill__group--item li {
   display: flex;
   align-items: center;
-  background-blend-mode: lighten;
-  background-size: cover;
-  background-repeat: no-repeat;
   padding: 10px;
   margin-top: 25px;
   max-width: 1680px;
@@ -1852,8 +1848,6 @@ main {
 
 .skills-text.show {
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   letter-spacing: 0px;
   color: #222;
 }
@@ -1929,9 +1923,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-blend-mode: lighten;
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: 10px;
     margin: 10px;
   }
@@ -1978,9 +1969,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-blend-mode: lighten;
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: 10px;
     margin: 10px;
     border: 8px solid #9dc4b74e;
