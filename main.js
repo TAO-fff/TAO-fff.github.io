@@ -285,7 +285,7 @@ gsap.from(".skill__group--item li", {
     trigger: ".skills__group", // トリガーとなる要素
     start: "top 95%", // トリガーの開始位置
     end: "bottom 20%", // トリガーの終了位置
-    scrub: false, // スクロールに連動せず、スクロール時にアニメーションが進行
+    scrub:true, // スクロールに連動せず、スクロール時にアニメーションが進行
     toggleActions:'play none none reverse',
   }
 });
