@@ -1814,7 +1814,10 @@ main {
   padding: 10px;
   margin-top: 25px;
   max-width: 1680px;
-  border: 15px solid #9dc4b74e;
+  border: 3px solid #9dc4b74e; /* border-top と border-left */
+  border-right: 13px solid #9dc4b74e;
+  border-bottom: 13px solid #9dc4b74e;
+  border-radius: 0 10px 10px 0; /* 右上, 右下のみ */
 }
 
 /* skillテキスト部分 */
