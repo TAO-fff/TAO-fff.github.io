@@ -1558,10 +1558,12 @@ main {
 
 .scrolldown1::after {
   height: 15px; /* 縦の線の高さ */
+  width: 2.5px;
 }
 
 .scrolldown1::before {
   width: 6px;
+  height: 2.5px;
 }
 
 
