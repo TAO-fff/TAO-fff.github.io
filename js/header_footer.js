@@ -83,3 +83,31 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+
+// topボタン
+// top-btn 1000px以下の時、200pxスクロールしたら出てくる
+document.addEventListener("DOMContentLoaded", function () {
+  const topBtn = document.querySelector(".top-btn");
+  topBtn.style.display = "none"; // 初期状態では非表示
+
+  window.addEventListener("scroll", function () {
+    if (window.innerWidth <= 3000) {
+      if (window.scrollY > 2000) {
+        topBtn.style.display = "flex"; // スクロールが200pxを超えたら表示
+      } else {
+        topBtn.style.display = "none"; // スクロールが200px未満なら非表示
+      }
+    } else {
+      topBtn.style.display = "none"; // 画面幅が1000pxを超えている場合は非表示
+    }
+  });
+});
+
+
+// .8秒で戻る
+$('#back-to-top-btn').click(function () {
+  $('body, html').animate({ scrollTop: 0 }, 800);
+  return false;
+});
+
