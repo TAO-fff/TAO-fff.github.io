@@ -1549,7 +1549,8 @@ main {
     color: #fbfbfb;
     letter-spacing: 0.08rem;
     background-color: #9dc4b7;
-    padding: 5px;
+    padding: 5px;        
+    writing-mode: horizontal-tb;
   }
 
   .side-scroll {
@@ -1591,6 +1592,7 @@ main {
     letter-spacing: 0.08rem;
     background-color: #9dc4b7;
     padding: 5px;
+    writing-mode: horizontal-tb;
   }
 
   /* 横スクロールアイテムのサイズ調整 */
