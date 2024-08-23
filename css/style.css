@@ -1359,6 +1359,7 @@ main {
   font-weight: 400;
   letter-spacing: 0.01rem;
   color: #9dc4b7;
+  writing-mode: vertical-lr;
 }
 
 .scrolldown1 {
