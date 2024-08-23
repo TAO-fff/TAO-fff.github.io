@@ -20,7 +20,17 @@ $(document).ready(function () {
 
 
 
+// .8秒でリンク先に
+$('.scroll-btn').click(function (event) {
+  event.preventDefault(); // デフォルトのリンク動作を防ぐ
 
+  var target = $(this).attr('href'); // クリックされたリンクのhref属性値を取得
+  var $target = $(target); // ターゲット要素を選択
+
+  $('html, body').animate({
+      scrollTop: $target.offset().top // ターゲット要素までスクロール
+  }, 800);
+});
 
 
 // ham 【btn動き】
