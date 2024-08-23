@@ -1543,11 +1543,6 @@ main {
     width: 2.5px;
   }
 
-  .scrolldown1::before {
-    width: 6px;
-    height: 2.5px;
-  }
-
   .works-scroll-area p {
     font-size: 12px;
     color: #fbfbfb;
