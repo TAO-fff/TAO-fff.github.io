@@ -157,6 +157,24 @@ main {
   text-align: center;
 }
 
+/* transition-btn ページ遷移 */
+.transition {
+  position: fixed; /* または absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* 他の要素よりも前面に表示されるように */
+  transform: translateX(-100%);
+  background-color: tomato; /* 背景色が表示されるように */
+  transition: opacity 0.5s ease; /* アニメーションの設定 */
+}
+
+.transition.visible {
+  opacity: 1; /* アニメーション開始時の透明度 */
+}
+
+
 /* about・contactページ 一番上のタイトル */
 .about__section--ttl,
 .contact__section--ttl {
@@ -1377,7 +1395,8 @@ main {
   z-index: 1; /* 矢印の上に線を表示するため */
 }
 
-.scrolldown1::after {
+.scrolldown1::after,
+.scrolldown1::before {
   content: "";
   position: absolute;
   background: #9dc4b7; /* 線の色を指定 */
@@ -1392,7 +1411,14 @@ main {
   transform: translateX(-50%);
 }
 
-
+.scrolldown1::before {
+  width: 8px;
+  height: 0.5px;
+  bottom: 13px;
+  left: 56.5%;
+  transform: translateX(-50%) rotate(-45deg);
+  border-radius: 50%;
+}
 
 /*横スクロール部分 scroll高さ・位置・透過が変化して線が上から下に動く*/
 @keyframes scrolldown {
@@ -1533,24 +1559,11 @@ main {
 
 /* 767-520px以下 */
 @media screen and (min-width: 520px) and (max-width: 767px) {
-  .works-scroll-area {
-    top: 3%;
-    left: 43%;
-    gap: 5px;
-  }
-
-  .scrolldown1::after {
-    height: 15px; /* 縦の線の高さ */
-    width: 2.5px;
-  }
-
+  .works-scroll-area,
+  .scrolldown1::after.about-btn-inner,
+  .scrolldown1::before,
   .works-scroll-area p {
-    font-size: 12px;
-    color: #fbfbfb;
-    letter-spacing: 0.08rem;
-    background-color: #9dc4b7;
-    padding: 5px;        
-    writing-mode: horizontal-tb;
+   display: none;
   }
 
   .side-scroll {
@@ -1570,29 +1583,11 @@ main {
     padding: 115px 0 0 0;
   }
 
-  .works-scroll-area {
-    top: 160px;
-    left: 43%;
-    gap: 5px;
-  }
-
-  .scrolldown1::after {
-    height: 15px; /* 縦の線の高さ */
-    width: 1.5px;
-  }
-
-  .scrolldown1::before {
-    width: 6px;
-    height: 1.5px;
-  }
-
+  .works-scroll-area,
+  .scrolldown1::after.about-btn-inner,
+  .scrolldown1::before,
   .works-scroll-area p {
-    font-size: 10px;
-    color: #fbfbfb;
-    letter-spacing: 0.08rem;
-    background-color: #9dc4b7;
-    padding: 5px;
-    writing-mode: horizontal-tb;
+   display: none;
   }
 
   /* 横スクロールアイテムのサイズ調整 */
@@ -1794,10 +1789,10 @@ main {
   padding: 10px;
   margin-top: 25px;
   max-width: 1680px;
-  border: 3px solid #9dc4b7; /* border-top と border-left */
-  border-right: 13px solid #9dc4b7;
-  border-bottom: 13px solid #9dc4b7;
-  border-radius: 0 10px 10px 0; /* 右上, 右下のみ */
+  border: 3px solid rgb(157, 196, 183, 1); /* border-top と border-left */
+  border-right: 13px solid rgb(157, 196, 183, 1);
+  border-bottom: 13px solid rgb(157, 196, 183, 1);
+  border-radius: 0 10px 10px 10px; 
 }
 
 /* skillテキスト部分 */
