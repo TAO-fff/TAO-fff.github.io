@@ -803,7 +803,7 @@ picture {
 
 .side-ttl-wrapper {
   position: absolute;
-  top: 4vmin;
+  top: 10vmin;
   left: calc(100% - 97%);
 }
 
@@ -1009,8 +1009,8 @@ picture {
   justify-content: start;
   align-items: start;
   justify-items: center;
-  margin: calc(100% - 85%) auto;
-  padding: 30px;
+  padding: calc(100% - 85%) 0;
+  margin: 30px;
 }
 
 .skill-card {
