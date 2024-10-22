@@ -1009,8 +1009,8 @@ picture {
   justify-content: start;
   align-items: start;
   justify-items: center;
-  padding: calc(100% - 85%) 0;
-  margin: 30px;
+  margin: calc(100% - 85%) auto;
+  padding: 30px;
 }
 
 .skill-card {
@@ -1653,7 +1653,7 @@ textarea.contact-form-input {
   padding: 17% 1px 20px;
   color: var(--color);
   position: absolute;
-  top: 21vmin;
+  top: 88%;
   left: 0;
   width: 100%;
   height: 100%;
