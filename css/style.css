@@ -492,7 +492,7 @@ svg.overlay {
   display: block;
   content: "";
   width: 0.5px;
-  height: 80px;
+  height: 5vmin;
   background: var(--color);
   position: absolute;
   right: 3.4vmin;
@@ -511,15 +511,15 @@ svg.overlay {
     top: -30px;
   }
   50% {
-    height: 40px; /* 途中で高さが増えてラインが伸びる */
+    height: 60px; /* 途中で高さが増えてラインが伸びる */
     top: 0; /* まだ位置は変わらない */
   }
   80% {
-    height: 30px; /* 高さは維持 */
+    height: 50px; /* 高さは維持 */
     top: 20px; /* ラインが下に抜けていく */
   }
   90% {
-    height: 10px; /* 高さは維持 */
+    height: 30px; /* 高さは維持 */
     top: 40px; /* ラインが下に抜けていく */
   }
   100% {
@@ -887,7 +887,7 @@ picture {
   cursor: pointer;
   border: 1px solid #e8e8e8;
   transition: all 0.3s;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px rgb(197, 197, 197, .7), -6px -6px 12px #ffffff;
   transition: 5.8s ease-in-out;
 }
 
@@ -899,7 +899,7 @@ picture {
     4px 4px 5px 0px rgba(81, 81, 81, 0.067);
     background-color: rgb(246, 250, 245, 0.1);
     color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  box-shadow: inset 4px 4px 12px rgb(197, 197, 197, .7), inset -4px -4px 12px #ffffff;
 }
 
 .btn-txt {
@@ -1009,8 +1009,8 @@ picture {
   justify-content: start;
   align-items: start;
   justify-items: center;
-  margin: calc(100% - 85%) auto;
-  padding: 30px;
+  margin: calc(100% - 55%) auto calc(100% - 75%) auto;
+  padding: 7%;
 }
 
 .skill-card {
@@ -1132,6 +1132,7 @@ picture {
     margin: calc(100% - 70%) 0;
     flex-direction: column;
     align-items: center;
+    padding: 30px;
   }
 
   .skill-card {
